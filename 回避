@@ -157,7 +157,8 @@ if sound_1 == False or sound_2 == False or sound_3 == False or sound_4 == False:
 game_text_1 = os.path.exists('save_1.py')
 game_text_2 = os.path.exists('save_2.py')
 game_text_3 = os.path.exists('save_3.py')
-if game_text_1 == False or game_text_2 == False or game_text_3 == False:
+game_text_4 = os.path.exists('game_save.py')
+if game_text_1 == False or game_text_2 == False or game_text_3 == False or game_text_4 == False:
     screen = pygame.display.set_mode((800 , 200))
     while True:
         for event in pygame.event.get():
@@ -293,14 +294,40 @@ tong_guan_1 = {tong_guan_1}
 tong_guan_2 = {tong_guan_2}
 tong_guan_3 = {tong_guan_3}
 tong_guan_4 = {tong_guan_4}
-tong_guan_5 = {tong_guan_5}''')
+tong_guan_5 = {tong_guan_5}
+
+level_1_donut = {level_1_donut}
+level_2_donut = {level_2_donut}
+level_3_donut = {level_3_donut}
+level_4_donut = {level_4_donut}
+level_5_donut = {level_5_donut}''')
     save_open.close()
 
+    save_open_2 = open('game_save.py', 'w')
+    save_open_2.write(f'default_save_name = {default_save_name}')
+    save_open_2.close()
 
+def default_save_name_pan_duan():
+    import game_save
+    global default_save_name, user, user_2, user_3
+    default_save_name = game_save.default_save_name
+    if default_save_name == 1:
+        user = True
+        user_2 = False
+        user_3 = False
+    elif default_save_name == 2:
+        user = False
+        user_2 = True
+        user_3 = False
+    elif default_save_name == 3:
+        user = False
+        user_2 = False
+        user_3 = True
 
 def user_pan_duan():
-    global name, player_speed, player_speed_00, player_speed_4, fps, fps_1, sound, sound_1, sound_4, sound_5, hp, hp_3, hp_00, coins, die_number, e, open_level, level_ok_number, starts, starts_open_1, starts_open_2, starts_open_3, starts_open_4, starts_open_5, cheng_jiu_cishu_1, cheng_jiu_cishu_2, cheng_jiu_cishu_3, cheng_jiu_cishu_4, cheng_jiu_cishu_5, cheng_jiu_cishu_6, cheng_jiu_cishu_7, cheng_jiu_cishu_8, cheng_jiu_cishu_9, cheng_jiu_cishu_10, cheng_jiu_cishu_11, cheng_jiu_cishu_12, cheng_jiu_cishu_13, cheng_jiu_cishu_14, coins_dui_huan_1, coins_dui_huan_2, coins_dui_huan_3, coins_dui_huan_4, coins_dui_huan_5, coins_dui_huan_6, coins_dui_huan_7, coins_dui_huan_8, coins_dui_huan_9, coins_dui_huan_10, coins_dui_huan_11, first_level_1, first_level_2, first_level_3, first_level_4, first_level_5, tips, tips_1, player_speed_3, hp_2, tong_guan_1, tong_guan_2, tong_guan_3, tong_guan_4, tong_guan_5, su_du_upgrade_number, hp_upgrade_number, upgrade_number, hui_fu_number, su_du_number, lower_number, coins_two_number, dao_ju_hp_level, dao_ju_su_du_level, dao_ju_lower_level, dao_ju_coins_two_level, read_ok, first_cheng_jiu_open, first_shop_open, first_upgrade_open, first_tong_ji_open, first_dui_huan_open, cheng_jiu_open, shop_open, upgrade_open, tong_ji_open, dui_huan_open, first_open_game, save_name_true
+    global name, player_speed, player_speed_00, player_speed_4, fps, fps_1, sound, sound_1, sound_4, sound_5, hp, hp_3, hp_00, coins, die_number, e, open_level, level_ok_number, starts, starts_open_1, starts_open_2, starts_open_3, starts_open_4, starts_open_5, cheng_jiu_cishu_1, cheng_jiu_cishu_2, cheng_jiu_cishu_3, cheng_jiu_cishu_4, cheng_jiu_cishu_5, cheng_jiu_cishu_6, cheng_jiu_cishu_7, cheng_jiu_cishu_8, cheng_jiu_cishu_9, cheng_jiu_cishu_10, cheng_jiu_cishu_11, cheng_jiu_cishu_12, cheng_jiu_cishu_13, cheng_jiu_cishu_14, coins_dui_huan_1, coins_dui_huan_2, coins_dui_huan_3, coins_dui_huan_4, coins_dui_huan_5, coins_dui_huan_6, coins_dui_huan_7, coins_dui_huan_8, coins_dui_huan_9, coins_dui_huan_10, coins_dui_huan_11, first_level_1, first_level_2, first_level_3, first_level_4, first_level_5, tips, tips_1, player_speed_3, hp_2, tong_guan_1, tong_guan_2, tong_guan_3, tong_guan_4, tong_guan_5, su_du_upgrade_number, hp_upgrade_number, upgrade_number, hui_fu_number, su_du_number, lower_number, coins_two_number, dao_ju_hp_level, dao_ju_su_du_level, dao_ju_lower_level, dao_ju_coins_two_level, read_ok, first_cheng_jiu_open, first_shop_open, first_upgrade_open, first_tong_ji_open, first_dui_huan_open, cheng_jiu_open, shop_open, upgrade_open, tong_ji_open, dui_huan_open, first_open_game, save_name_true, level_1_donut, level_2_donut, level_3_donut, level_4_donut, level_5_donut
     import save_1, save_2, save_3
+    default_save_name_pan_duan()
     if user == True:
         name = save_1.name
         player_speed = save_1.player_speed
@@ -399,6 +426,13 @@ def user_pan_duan():
         dao_ju_su_du_level = save_1.dao_ju_su_du_level
         dao_ju_lower_level = save_1.dao_ju_lower_level
         dao_ju_coins_two_level = save_1.dao_ju_coins_two_level
+        
+        level_1_donut = save_1.level_1_donut
+        level_2_donut = save_1.level_2_donut
+        level_3_donut = save_1.level_3_donut
+        level_4_donut = save_1.level_4_donut
+        level_5_donut = save_1.level_5_donut
+        
         read_ok = True
         save()
 
@@ -429,7 +463,7 @@ def user_pan_duan():
         first_upgrade_open = save_2.first_upgrade_open
         first_tong_ji_open = save_2.first_tong_ji_open
         first_dui_huan_open = save_2.first_dui_huan_open
-        
+
         cheng_jiu_open = save_2.cheng_jiu_open
         shop_open = save_2.shop_open
         upgrade_open = save_2.upgrade_open
@@ -500,6 +534,13 @@ def user_pan_duan():
         dao_ju_su_du_level = save_2.dao_ju_su_du_level
         dao_ju_lower_level = save_2.dao_ju_lower_level
         dao_ju_coins_two_level = save_2.dao_ju_coins_two_level
+        
+        level_1_donut = save_2.level_1_donut
+        level_2_donut = save_2.level_2_donut
+        level_3_donut = save_2.level_3_donut
+        level_4_donut = save_2.level_4_donut
+        level_5_donut = save_2.level_5_donut
+        
         read_ok = True
         save()
 
@@ -530,7 +571,7 @@ def user_pan_duan():
         first_upgrade_open = save_3.first_upgrade_open
         first_tong_ji_open = save_3.first_tong_ji_open
         first_dui_huan_open = save_3.first_dui_huan_open
-        
+
         cheng_jiu_open = save_3.cheng_jiu_open
         shop_open = save_3.shop_open
         upgrade_open = save_3.upgrade_open
@@ -601,6 +642,13 @@ def user_pan_duan():
         dao_ju_su_du_level = save_3.dao_ju_su_du_level
         dao_ju_lower_level = save_3.dao_ju_lower_level
         dao_ju_coins_two_level = save_3.dao_ju_coins_two_level
+
+        level_1_donut = save_3.level_1_donut
+        level_2_donut = save_3.level_2_donut
+        level_3_donut = save_3.level_3_donut
+        level_4_donut = save_3.level_4_donut
+        level_5_donut = save_3.level_5_donut
+
         read_ok = True
         save()
 
@@ -740,9 +788,10 @@ def back():
         screen.blit(text, (0, 0))
 
 
-    
+
 def set_o():
-    global player_speed_4, fps_1, fps, tips_1, tips, sound, sound_1, sound_2, sound_4, sound_5, coins, player_speed_3, hp_2, player_speed, hp, first_level_1, first_level_2, first_level_3, first_level_4, first_level_5, tong_guan_1, tong_guan_2, tong_guan_3, tong_guan_4, tong_guan_5, hp_3, e, starts, starts_open_1, starts_open_2, starts_open_3, starts_open_4, starts_open_5, die_number, cheng_jiu_cishu_1, cheng_jiu_cishu_2, cheng_jiu_cishu_3, cheng_jiu_cishu_4, cheng_jiu_cishu_5, cheng_jiu_cishu_6, cheng_jiu_cishu_7, cheng_jiu_cishu_8, cheng_jiu_cishu_9, cheng_jiu_cishu_10, cheng_jiu_cishu_11, cheng_jiu_cishu_12, cheng_jiu_cishu_13, open_level, level_ok_number, hui_fu_number, su_du_number, lower_number, coins_two_number, su_du_upgrade_number, hp_upgrade_number, upgrade_number, dao_ju_hp_level, dao_ju_su_du_level, dao_ju_lower_level, dao_ju_coins_two_level, save_name_true, save_name_true_2
+    import save_1, save_2, save_3
+    global player_speed_4, fps_1, fps, tips_1, tips, sound, sound_1, sound_2, sound_4, sound_5, coins, player_speed_3, hp_2, player_speed, hp, first_level_1, first_level_2, first_level_3, first_level_4, first_level_5, tong_guan_1, tong_guan_2, tong_guan_3, tong_guan_4, tong_guan_5, hp_3, e, starts, starts_open_1, starts_open_2, starts_open_3, starts_open_4, starts_open_5, die_number, cheng_jiu_cishu_1, cheng_jiu_cishu_2, cheng_jiu_cishu_3, cheng_jiu_cishu_4, cheng_jiu_cishu_5, cheng_jiu_cishu_6, cheng_jiu_cishu_7, cheng_jiu_cishu_8, cheng_jiu_cishu_9, cheng_jiu_cishu_10, cheng_jiu_cishu_11, cheng_jiu_cishu_12, cheng_jiu_cishu_13, open_level, level_ok_number, hui_fu_number, su_du_number, lower_number, coins_two_number, su_du_upgrade_number, hp_upgrade_number, upgrade_number, dao_ju_hp_level, dao_ju_su_du_level, dao_ju_lower_level, dao_ju_coins_two_level, save_name_true, save_name_true_2, default_save_name
     while True:
 
         fps = fps_1
@@ -755,7 +804,7 @@ def set_o():
         win_sound.set_volume(sound)
         game_over_sound.set_volume(sound)
         pygame.mixer.music.set_volume(sound_4)
-        
+
         if fps_1 > 96:
             fps_1 = 96
 
@@ -774,7 +823,7 @@ def set_o():
             text = a.render('D', True, (green))
             screen.blit(text, (52, 180))
 
-            text = a.render('K', True, (green))
+            text = a.render('S', True, (green))
             screen.blit(text, (320, 180))
 
             text = a.render('V', True, (green))
@@ -785,6 +834,9 @@ def set_o():
 
             text = a.render('U', True, (green))
             screen.blit(text, (640, 534))
+            
+            text = a.render('Q', True, (green))
+            screen.blit(text, (52, 252))
 
         text = fps_00.render(f'帧率：{fps_1}', True, (black))
         screen.blit(text, (12, 42))
@@ -851,7 +903,7 @@ def set_o():
 
         elif sound_4 == 1.25:
             sound_6 = '很大'
-            
+
 
         text = fps_00.render(f'音效：{sound_2}', True, (black))
         screen.blit(text, (560, 42))
@@ -867,6 +919,16 @@ def set_o():
 
         text = fps_00.render(f'显示存档名：{save_name_true_2}', True, (black))
         screen.blit(text, (270, 120))
+        
+        if default_save_name == 1:
+            set_default_save_name = save_1.name
+        elif default_save_name == 2:
+            set_default_save_name = save_2.name
+        elif default_save_name == 3:
+            set_default_save_name = save_3.name
+        
+        text = fps_00.render(f'默认存档：{set_default_save_name}', True, (black))
+        screen.blit(text, (12, 198))
 
         text = fps_00.render('重置游戏', True, (black))
         screen.blit(text, (57, 480))
@@ -910,7 +972,7 @@ def set_o():
                     dianji.play()
                     sound_5 += 0.25
 
-                elif event.key == ord('k'):
+                elif event.key == ord('s'):
                     dianji.play()
                     if save_name_true == True:
                         save_name_true = False
@@ -932,7 +994,7 @@ def set_o():
                     save_name_true = True
                     text = fps_00.render('重置完成！', True, (black))
                     screen.blit(text, (307, 280))
-                    
+
                     text = exit_game.render('=￣ω￣=', True, (black))
                     screen.blit(text, (327, 340))
                     pygame.display.update()
@@ -947,6 +1009,12 @@ def set_o():
                     dianji.play()
                     save()
                     user_select()
+                    
+                elif event.key == ord('q'):
+                    dianji.play()
+                    default_save_name += 1
+                    if default_save_name > 3:
+                        default_save_name = 1
 
                 elif event.key == K_ESCAPE:
                     dianji.play()
@@ -958,7 +1026,7 @@ def set_o():
 
 
 def save_restet():
-    global sound_4, tips, hp, player_speed_4, fps_1, fps, tips_1, tips, sound, sound_1, sound_2, sound_4, sound_5, coins, player_speed_3, hp_2, player_speed, hp, first_level_1, first_level_2, first_level_3, first_level_4, first_level_5, tong_guan_1, tong_guan_2, tong_guan_3, tong_guan_4, tong_guan_5, hp_3, e, starts, starts_open_1, starts_open_2, starts_open_3, starts_open_4, starts_open_5, die_number, cheng_jiu_cishu_1, cheng_jiu_cishu_2, cheng_jiu_cishu_3, cheng_jiu_cishu_4, cheng_jiu_cishu_5, cheng_jiu_cishu_6, cheng_jiu_cishu_7, cheng_jiu_cishu_8, cheng_jiu_cishu_9, cheng_jiu_cishu_10, cheng_jiu_cishu_11, cheng_jiu_cishu_12, cheng_jiu_cishu_13, cheng_jiu_cishu_14, open_level, level_ok_number, hui_fu_number, su_du_number, lower_number, coins_two_number, su_du_upgrade_number, hp_upgrade_number, upgrade_number, dao_ju_hp_level, dao_ju_su_du_level, dao_ju_lower_level, dao_ju_coins_two_level, first_open_game, save_name_true, cheng_jiu_open, shop_open, upgrade_open, tong_ji_open, dui_huan_open, first_cheng_jiu_open, first_shop_open, first_upgrade_open, first_tong_ji_open, first_dui_huan_open, coins_dui_huan_1, coins_dui_huan_2, coins_dui_huan_3, coins_dui_huan_4, coins_dui_huan_5, coins_dui_huan_6, coins_dui_huan_7, coins_dui_huan_8, coins_dui_huan_9, coins_dui_huan_10, coins_dui_huan_11
+    global sound_4, tips, hp, player_speed_4, fps_1, fps, tips_1, tips, sound, sound_1, sound_2, sound_4, sound_5, coins, player_speed_3, hp_2, player_speed, hp, first_level_1, first_level_2, first_level_3, first_level_4, first_level_5, tong_guan_1, tong_guan_2, tong_guan_3, tong_guan_4, tong_guan_5, hp_3, e, starts, starts_open_1, starts_open_2, starts_open_3, starts_open_4, starts_open_5, die_number, cheng_jiu_cishu_1, cheng_jiu_cishu_2, cheng_jiu_cishu_3, cheng_jiu_cishu_4, cheng_jiu_cishu_5, cheng_jiu_cishu_6, cheng_jiu_cishu_7, cheng_jiu_cishu_8, cheng_jiu_cishu_9, cheng_jiu_cishu_10, cheng_jiu_cishu_11, cheng_jiu_cishu_12, cheng_jiu_cishu_13, cheng_jiu_cishu_14, open_level, level_ok_number, hui_fu_number, su_du_number, lower_number, coins_two_number, su_du_upgrade_number, hp_upgrade_number, upgrade_number, dao_ju_hp_level, dao_ju_su_du_level, dao_ju_lower_level, dao_ju_coins_two_level, first_open_game, save_name_true, cheng_jiu_open, shop_open, upgrade_open, tong_ji_open, dui_huan_open, first_cheng_jiu_open, first_shop_open, first_upgrade_open, first_tong_ji_open, first_dui_huan_open, coins_dui_huan_1, coins_dui_huan_2, coins_dui_huan_3, coins_dui_huan_4, coins_dui_huan_5, coins_dui_huan_6, coins_dui_huan_7, coins_dui_huan_8, coins_dui_huan_9, coins_dui_huan_10, coins_dui_huan_11, default_save_name, level_1_donut, level_2_donut, level_3_donut, level_4_donut, level_5_donut
     while True:
         screen.fill(white)
         text = upgrade.render('确定要重置游戏吗？', True, (black))
@@ -1042,7 +1110,7 @@ def save_restet():
                     lower_number = 0
                     coins_two_number = 0
                     player_speed_4 = 3
-                                    
+
                     starts = 0
                     starts_open_1 = False
                     starts_open_2 = False
@@ -1088,10 +1156,19 @@ def save_restet():
                     tong_guan_3 = False
                     tong_guan_4 = False
                     tong_guan_5 = False
+                    
+                    default_save_name = 1
+                    
+                    level_1_donut = False
+                    level_2_donut = False
+                    level_3_donut = False
+                    level_4_donut = False
+                    level_5_donut = False
+                    
                     save()
                     text = fps_00.render('重置完成！', True, (black))
                     screen.blit(text, (300, 280))
-                    
+
                     text = exit_game.render('=￣ω￣=', True, (black))
                     screen.blit(text, (310, 340))
                     pygame.display.update()
@@ -1735,7 +1812,7 @@ def man_2():
                 dianji.play()
                 save()
                 quit_game()
-                                            
+
             elif event.type == KEYDOWN:
                 if event.key == ord('r'):
                     dianji.play()
@@ -1831,7 +1908,7 @@ def no_coins_3():
                 dianji.play()
                 save()
                 quit_game()
-                                            
+
             elif event.type == KEYDOWN:
                 if event.key == ord('r'):
                     dianji.play()
@@ -1990,7 +2067,7 @@ def cheng_jiu():
         elif cheng_jiu_1_coins < 13:
             text = cheng_jiu_1a.render('☆', True, (yellow))
             screen.blit(text, (640, 530))
-            
+
 
         back()
         if dui_huan_open == True:
@@ -2031,7 +2108,7 @@ def cheng_jiu():
         screen.blit(text, (25, 530))
         text = upgrade.render('13颗星', True, (black))
         screen.blit(text, (425, 530))
-        
+
         text = cheng_jiu_1a.render('通关第一关', True, (black))
         screen.blit(text, (25, 90))
         text = cheng_jiu_1a.render('第一次满血通关第一关', True, (black))
@@ -2409,7 +2486,7 @@ def coins_dui_huan_name():
         else:
             text = shop_1.render('兑换', True, (black))
             screen.blit(text, (450, 345))
-        
+
 
 
 
@@ -2503,7 +2580,7 @@ def cheng_jiu_pan_duan():
 
 
 
-        
+
 def cheng_jiu_0():
     clock.tick(12)
     global cheng_jiu_cishu_1, cheng_jiu_cishu_2, cheng_jiu_cishu_3, cheng_jiu_cishu_4, cheng_jiu_cishu_5, cheng_jiu_cishu_6, cheng_jiu_cishu_7, cheng_jiu_cishu_8, cheng_jiu_cishu_9, cheng_jiu_cishu_10, cheng_jiu_cishu_11, cheng_jiu_cishu_12, cheng_jiu_cishu_13, cheng_jiu_cishu_14
@@ -2625,7 +2702,7 @@ def cheng_jiu_0():
     pygame.display.update()
 
 
-        
+
 def no_coins():
     while True:
         text = fps_00.render('没金币了呢！', True, (black))
@@ -2640,7 +2717,7 @@ def no_coins():
                 dianji.play()
                 save()
                 quit_game()
-                                            
+
             elif event.type == KEYDOWN:
                 if event.key == ord('r'):
                     dianji.play()
@@ -2670,7 +2747,7 @@ def man():
             dianji.play()
             save()
             quit_game()
-                                            
+
         elif event.type == KEYDOWN:
             if event.key == ord('r'):
                 dianji.play()
@@ -2796,7 +2873,7 @@ def game_shop():
             screen.blit(text, (720, 476))
 
         pygame.display.update()
-     
+
 
 
 def no_coins_2():
@@ -2856,7 +2933,7 @@ def no_coins_2():
                 dianji.play()
                 save()
                 quit_game()
-                                            
+
             elif event.type == KEYDOWN:
                 if event.key == ord('r'):
                     dianji.play()
@@ -2878,7 +2955,7 @@ def level():
     while True:
         ticks += 1
         clock.tick(12)
-        
+
         screen.fill(white)
 
         for event in pygame.event.get():
@@ -2921,7 +2998,7 @@ def level():
 
         pygame.display.update()
 
-        
+
 
 def level_select():
     global level_1, level_2, level_3, level_4, level_5, fps
@@ -2978,10 +3055,12 @@ def level_select():
 
                 elif event.key == K_6:
                     dianji.play()
+                    level_select()
                     level_start()
 
                 elif event.key == K_7:
                     dianji.play()
+                    level_select()
                     level_start()
 
                 elif event.key == ord('r'):
@@ -2993,7 +3072,7 @@ def level_select():
                     level()
 
         back()
-                                
+
         text = select.render('1     2     3', True, (black))
         screen.blit(text, (135, 25))
 
@@ -3107,7 +3186,7 @@ def level_start():
             score += 0.25
 
             hp_coloer_1()
-            
+
             for event in pygame.event.get():
                 if event.type == QUIT:
                     dianji.play()
@@ -3126,7 +3205,7 @@ def level_start():
                         player_y = -player_speed
                         player_x = player_speed
 
-                                    
+
 
                     elif event.key == ord('s') or event.key == K_DOWN:
                         player_y = player_speed
@@ -3138,7 +3217,7 @@ def level_start():
                     elif event.key == ord('s') and ord('d'):
                         player_y = player_speed
                         player_x = player_speed
-                                    
+
 
 
                     elif event.key == ord('a') or event.key == K_LEFT:
@@ -3201,7 +3280,7 @@ def level_start():
                             if tips == True:
                                 text = stop_tips_1.render('R.', True, (red))
                                 screen.blit(text, (60, 220))
-                                
+
                                 text = stop_tips_1.render('C.', True, (red))
                                 screen.blit(text, (60, 270))
 
@@ -3360,7 +3439,7 @@ def level_start():
             text = upgrade.render(f'{hp}', True, (hp_coloer))
             screen.blit(text, (760, 560))
 
-            
+
             if hp <= 0:
                 screen.blit(bg_img, (0, 0))
                 game_over_2()
@@ -3395,7 +3474,7 @@ def restet_all():
 
     for e in dicis_2:
         e.restet_2()
-                            
+
     for e in dicis_3:
         e.restet_3()
 
@@ -3437,7 +3516,7 @@ def restet_all_2():
 
     for e in dicis_2:
         e.restet_2()
-                            
+
     for e in dicis_3:
         e.restet_3()
 
@@ -3681,7 +3760,7 @@ def game_over_2():
                     dianji.play()
                     restet_all()
                     game_shop()
-                            
+
                 elif event.key == K_ESCAPE:
                     dianji.play()
                     restet_all()
@@ -3859,6 +3938,7 @@ def win():
 
     if coins_two == True:
         coins += reward * 2
+        reward = reward * 2
 
     else:
         coins += reward
@@ -4026,7 +4106,7 @@ def next_level():
         clock.tick(0.8)
 
 
-        
+
 def level_false():
     global level_1, level_2, level_3, level_4, level_5
     level_1 = False
@@ -4047,8 +4127,8 @@ def ok_false():
     dicis_2 = []
     dicis_3 = []
 
-    
-    
+
+
 def play_game():
     global open_level, dici_number, dici_2_number, dici_3_number, ok, ok_2, ok_3, ok_4, ok_5, dici_zhong_lei, level_tips_4
     dici_number = 0
@@ -4433,7 +4513,7 @@ def xianzhi():
                 dianji.play()
                 save()
                 quit_game()
-                                            
+
             elif event.type == KEYDOWN:
                 if event.key == ord('r'):
                     dianji.play()
@@ -4476,17 +4556,76 @@ def play_game_2():
     screen.blit(bg_img, (0, 0))
     text = level_look_00.render(f'第{level_number}关', True, (red))
     screen.blit(text, (170, 50))
-    
+
     text = exit_game.render(f'{level_tips_2}', True, (red))
     screen.blit(text, (25, 240))
 
     pygame.display.update()
     clock.tick(0.3)
     screen.blit(bg_img, (0, 0))
-    level_start()
+    donut()
 
 
-    
+
+def donut():
+    global level_1_donut, level_2_donut, level_3_donut, level_4_donut, level_5_donut
+    if level_1 == True and level_1_donut == False:
+        level_1_donut = True
+        screen.blit(bg_img, (0, 0))
+        screen.blit(player_img, (360, 478))
+        text = upgrade.render('美好的一天从工作开始！U•ェ•*U', True, (green))
+        screen.blit(text, (150, 320))
+        pygame.display.update()
+        sleep(2.5)
+        level_start()
+
+    elif level_2 == True and level_2_donut == False:
+        level_2_donut = True
+        screen.blit(bg_img, (0, 0))
+        screen.blit(player_img, (360, 478))
+        text = upgrade.render('果然还是宅在家里面安全(T_T)', True, (green))
+        screen.blit(text, (150, 320))
+        pygame.display.update()
+        sleep(2)
+        level_start()
+
+    elif level_3 == True and level_3_donut == False:
+        level_3_donut = True
+        screen.blit(bg_img, (0, 0))
+        screen.blit(player_img, (360, 478))
+        text = upgrade.render('要不请个假别，好危险啊…(⊙_⊙;)…', True, (green))
+        screen.blit(text, (150, 320))
+        pygame.display.update()
+        sleep(2)
+        level_start()
+
+    elif level_4 == True and level_4_donut == False:
+        level_4_donut = True
+        screen.blit(bg_img, (0, 0))
+        screen.blit(player_img, (360, 478))
+        text = upgrade.render('快到了快到了！加油！（好不容易才到这的，就别回去了吧）', True, (green))
+        screen.blit(text, (0, 320))
+        text = upgrade.render('╮（╯＿╰）╭', True, (green))
+        screen.blit(text, (320, 350))
+        pygame.display.update()
+        sleep(3)
+        level_start()
+
+    elif level_5 == True and level_5_donut == False:
+        level_5_donut = True
+        screen.blit(bg_img, (0, 0))
+        screen.blit(player_img, (360, 478))
+        text = upgrade.render('总算过来了，那些太空垃圾飞的真快(￣﹏￣；)', True, (green))
+        screen.blit(text, (50, 320))
+        pygame.display.update()
+        sleep(3)
+        level_start()
+
+    else:
+        level_start()
+
+
+
 class dici():
     def __init__(self):
         self.dici_img = pygame.image.load('图片\地刺.png')
@@ -4577,7 +4716,7 @@ def first_open_game_tips():
                 save()
                 quit_game()
 
-            elif event.type == KEYDOWN:     
+            elif event.type == KEYDOWN:
                 if event.key == ord('r'):
                     dianji.play()
                     save()
@@ -4622,7 +4761,7 @@ def open_block():
             first_cheng_jiu_open = True
             open_block_ok = True
             aaa = True
-            sleep(0.5)
+            sleep(1.5)
 
         elif shop_open == True and first_shop_open == False:
             screen.blit(bg_img_2, (0, 0))
@@ -4637,7 +4776,7 @@ def open_block():
             first_shop_open = True
             open_block_ok = True
             aaa = True
-            sleep(0.5)
+            sleep(1.5)
 
         elif upgrade_open == True and first_upgrade_open == False:
             screen.blit(bg_img_2, (0, 0))
@@ -4652,7 +4791,7 @@ def open_block():
             first_upgrade_open = True
             open_block_ok = True
             aaa = True
-            sleep(0.5)
+            sleep(1.5)
 
         elif tong_ji_open == True and first_tong_ji_open == False:
             screen.blit(bg_img_2, (0, 0))
@@ -4668,7 +4807,7 @@ def open_block():
             first_tong_ji_open = True
             open_block_ok = True
             aaa = True
-            sleep(0.5)
+            sleep(1.5)
 
         elif dui_huan_open == True and first_dui_huan_open == False:
             screen.blit(bg_img_2, (0, 0))
@@ -4684,7 +4823,7 @@ def open_block():
             first_dui_huan_open = True
             open_block_ok = True
             aaa = True
-            sleep(0.5)
+            sleep(1.5)
 
         elif (cheng_jiu_open == True and first_cheng_jiu_open == True and aaa == False) or (cheng_jiu_open == False and first_cheng_jiu_open == False and aaa == False) or(shop_open == True and first_shop_open == True and aaa == False) or (shop_open == False and first_shop_open == False and aaa == False) or (upgrade_open == True and first_upgrade_open == True and aaa == False) or (upgrade_open == False and first_upgrade_open == False and aaa == False) or (tong_ji_open == True and first_tong_ji_open == True and aaa == False) or (tong_ji_open == False and first_tong_ji_open == False and aaa == False) or (dui_huan_open == True and first_dui_huan_open == True and aaa == False) or (dui_huan_open == False and first_dui_huan_open == False and aaa == False):
             open_block_ok = True
@@ -4696,7 +4835,7 @@ def open_block():
                 save()
                 quit_game()
 
-            elif event.type == KEYDOWN:    
+            elif event.type == KEYDOWN:
                 if event.key == ord('r'):
                     dianji.play()
                     save()
@@ -4738,7 +4877,7 @@ def home_page():
                     dianji.play()
                     save()
                     level()
-                        
+
                 elif event.key == ord('r'):
                     dianji.play()
                     save()
@@ -4878,7 +5017,7 @@ def home_page():
 
             text = shop_1.render('O.', True, (green))
             screen.blit(text, (667, 0))
-            
+
         pygame.display.update()
 
 home_page()
