@@ -5,6 +5,8 @@ from time import sleep
 from math import sqrt
 pygame.init()
 
+game_dir = os.getcwd()
+
 level_look_00 = pygame.font.SysFont('华文楷体', 100)
 game_over_1 = pygame.font.SysFont('华文楷体', 70)
 def quit_game():
@@ -24,19 +26,19 @@ yellow = 255, 218, 185
 blue = 0, 255, 255
 red = 255,   0,   0
 
-dir_1 = os.path.isdir('F:\python3.8.2\回避\字体')
+dir_1 = os.path.isdir(f'{game_dir}\\字体')
 if dir_1 == False:
     while True:
         print('回避（错误）：遗失字体文件夹')
         sleep(666666)
-font_1 = os.path.exists('F:\python3.8.2\回避\字体\华文楷体.TTF')
-font_2 = os.path.exists('F:\python3.8.2\回避\字体\华文行楷.TTF')
+font_1 = os.path.exists(f'{game_dir}\\字体\\华文楷体.TTF')
+font_2 = os.path.exists(f'{game_dir}\\字体\\华文行楷.TTF')
 if font_1 == False or font_2 == False:
     while True:
         print('回避（错误）：遗失游戏内字体')
         sleep(666666)
 
-dir_2 = os.path.isdir('F:\python3.8.2\回避\图片')
+dir_2 = os.path.isdir(f'{game_dir}\\图片')
 if dir_2 == False:
     screen = pygame.display.set_mode((800 , 200))
     while True:
@@ -56,32 +58,32 @@ if dir_2 == False:
         text = level_look_00.render('遗失图片文件夹', True, (red))
         screen.blit(text, (46, 20))
         pygame.display.update()
-image_1 = os.path.exists('F:\python3.8.2\回避\图片\图标.png')
-image_2 = os.path.exists('F:\python3.8.2\回避\图片\背景图.png')
-image_3 = os.path.exists('F:\python3.8.2\回避\图片\zeus.png')
-image_4 = os.path.exists('F:\python3.8.2\回避\图片\背景.png')
-image_5 = os.path.exists('F:\python3.8.2\回避\图片\金币.png')
-image_6 = os.path.exists('F:\python3.8.2\回避\图片\暂停.png')
-image_7 = os.path.exists('F:\python3.8.2\回避\图片\减速.png')
-image_8 = os.path.exists('F:\python3.8.2\回避\图片\减速1.png')
-image_9 = os.path.exists('F:\python3.8.2\回避\图片\回复.png')
-image_10 = os.path.exists('F:\python3.8.2\回避\图片\回复1.png')
-image_11 = os.path.exists('F:\python3.8.2\回避\图片\地刺.png')
-image_12 = os.path.exists('F:\python3.8.2\回避\图片\激光.png')
-image_13 = os.path.exists('F:\python3.8.2\回避\图片\激光攻击.png')
-image_14 = os.path.exists('F:\python3.8.2\回避\图片\玩家1.png')
-image_15 = os.path.exists('F:\python3.8.2\回避\图片\玩家2.png')
-image_16 = os.path.exists('F:\python3.8.2\回避\图片\玩家3.png')
-image_17 = os.path.exists('F:\python3.8.2\回避\图片\玩家4.png')
-image_18 = os.path.exists('F:\python3.8.2\回避\图片\玩家坠毁1.png')
-image_19 = os.path.exists('F:\python3.8.2\回避\图片\玩家坠毁2.png')
-image_20 = os.path.exists('F:\python3.8.2\回避\图片\玩家坠毁3.png')
-image_21 = os.path.exists('F:\python3.8.2\回避\图片\速度.png')
-image_22 = os.path.exists('F:\python3.8.2\回避\图片\速度1.png')
-image_23 = os.path.exists('F:\python3.8.2\回避\图片\金币.png')
-image_24 = os.path.exists('F:\python3.8.2\回避\图片\金币翻倍.png')
-image_25 = os.path.exists('F:\python3.8.2\回避\图片\金币翻倍1.png')
-image_26 = os.path.exists('F:\python3.8.2\回避\图片\长块.png')
+image_1 = os.path.exists(f'{game_dir}\\图片\\图标.png')
+image_2 = os.path.exists(f'{game_dir}\\图片\\背景图.png')
+image_3 = os.path.exists(f'{game_dir}\\图片\\zeus.png')
+image_4 = os.path.exists(f'{game_dir}\\图片\\背景.png')
+image_5 = os.path.exists(f'{game_dir}\\图片\\金币.png')
+image_6 = os.path.exists(f'{game_dir}\\图片\\暂停.png')
+image_7 = os.path.exists(f'{game_dir}\\图片\\减速.png')
+image_8 = os.path.exists(f'{game_dir}\\图片\\减速1.png')
+image_9 = os.path.exists(f'{game_dir}\\图片\\回复.png')
+image_10 = os.path.exists(f'{game_dir}\\图片\\回复1.png')
+image_11 = os.path.exists(f'{game_dir}\\图片\\地刺.png')
+image_12 = os.path.exists(f'{game_dir}\\图片\\激光.png')
+image_13 = os.path.exists(f'{game_dir}\\图片\\激光攻击.png')
+image_14 = os.path.exists(f'{game_dir}\\图片\\玩家1.png')
+image_15 = os.path.exists(f'{game_dir}\\图片\\玩家2.png')
+image_16 = os.path.exists(f'{game_dir}\\图片\\玩家3.png')
+image_17 = os.path.exists(f'{game_dir}\\图片\\玩家4.png')
+image_18 = os.path.exists(f'{game_dir}\\图片\\玩家坠毁1.png')
+image_19 = os.path.exists(f'{game_dir}\\图片\\玩家坠毁2.png')
+image_20 = os.path.exists(f'{game_dir}\\图片\\玩家坠毁3.png')
+image_21 = os.path.exists(f'{game_dir}\\图片\\速度.png')
+image_22 = os.path.exists(f'{game_dir}\\图片\\速度1.png')
+image_23 = os.path.exists(f'{game_dir}\\图片\\金币.png')
+image_24 = os.path.exists(f'{game_dir}\\图片\\金币翻倍.png')
+image_25 = os.path.exists(f'{game_dir}\\图片\\金币翻倍1.png')
+image_26 = os.path.exists(f'{game_dir}\\图片\\长块.png')
 if image_1 == False or image_2 == False or image_3 == False or image_4 == False or image_5 == False or image_6 == False or image_7 == False or image_8 == False or image_9 == False or image_10 == False or image_11 == False or image_12 == False or image_13 == False or image_14 == False or image_15 == False or image_16 == False or image_17 == False or image_18 == False or image_19 == False or image_20 == False or image_21 == False or image_22 == False or image_23 == False or image_24 == False or image_25 == False or image_26 == False:
     screen = pygame.display.set_mode((800 , 200))
     while True:
@@ -102,7 +104,7 @@ if image_1 == False or image_2 == False or image_3 == False or image_4 == False 
         screen.blit(text, (46, 20))
         pygame.display.update()
 
-dir_3 = os.path.isdir('F:\python3.8.2\回避\音乐')
+dir_3 = os.path.isdir(f'{game_dir}\\音乐')
 if dir_3 == False:
     screen = pygame.display.set_mode((800 , 200))
     while True:
@@ -122,10 +124,10 @@ if dir_3 == False:
         text = level_look_00.render('遗失音乐文件夹', True, (red))
         screen.blit(text, (46, 20))
         pygame.display.update()
-sound_1 = os.path.exists('F:\python3.8.2\回避\音乐\游戏点击音效.wav')
-sound_2 = os.path.exists('F:\python3.8.2\回避\音乐\游戏结束！.wav')
-sound_3 = os.path.exists('F:\python3.8.2\回避\音乐\游戏音乐.mp3')
-sound_4 = os.path.exists('F:\python3.8.2\回避\音乐\获胜.wav')
+sound_1 = os.path.exists(f'{game_dir}\\音乐\\游戏点击音效.wav')
+sound_2 = os.path.exists(f'{game_dir}\\音乐\\游戏结束！.wav')
+sound_3 = os.path.exists(f'{game_dir}\\音乐\\游戏音乐.wav')
+sound_4 = os.path.exists(f'{game_dir}\\音乐\\获胜.wav')
 if sound_1 == False or sound_2 == False or sound_3 == False or sound_4 == False:
     screen = pygame.display.set_mode((800 , 200))
     while True:
@@ -154,10 +156,10 @@ if sound_1 == False or sound_2 == False or sound_3 == False or sound_4 == False:
             screen.blit(text, (46, 20))
             pygame.display.update()
 
-game_text_1 = os.path.exists('save_1.py')
-game_text_2 = os.path.exists('save_2.py')
-game_text_3 = os.path.exists('save_3.py')
-game_text_4 = os.path.exists('game_save.py')
+game_text_1 = os.path.exists(f'{game_dir}\\save_1.py')
+game_text_2 = os.path.exists(f'{game_dir}\\save_2.py')
+game_text_3 = os.path.exists(f'{game_dir}\\save_3.py')
+game_text_4 = os.path.exists(f'{game_dir}\\game_save.py')
 if game_text_1 == False or game_text_2 == False or game_text_3 == False or game_text_4 == False:
     screen = pygame.display.set_mode((800 , 200))
     while True:
@@ -179,11 +181,10 @@ if game_text_1 == False or game_text_2 == False or game_text_3 == False or game_
             pygame.display.update()
 
 
-
-game_over_1 = pygame.font.SysFont('华文楷体', 50)
-text = game_over_1.render('ZEUS', True, (blue))
 screen = pygame.display.set_mode((800 , 600))
 screen.fill(white)
+game_over_1 = pygame.font.SysFont('华文楷体', 50)
+text = game_over_1.render('ZEUS', True, (blue))
 pygame.display.set_caption('回避')
 icon_img = pygame.image.load('图片\图标.png')
 zeus_img = pygame.image.load('图片\zeus.png')
@@ -191,8 +192,22 @@ pygame.display.set_icon(icon_img)
 screen.blit(zeus_img, (330, 200))
 screen.blit(text, (335, 320))
 pygame.display.update()
-sleep(1)
-
+ko = True
+clock_2 = pygame.time.Clock()
+clock_3 = 0
+while ko:
+    clock_3 += clock_2.tick()
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            quit_game()
+        elif event.type == KEYDOWN:
+            if event.key == ord('r'):
+                quit_game()
+            elif event.key == ESCAPE:
+                quit_game()
+    if clock_3 >= 300 and clock_3 <= 400:
+        ko = False
+ko = True
 c = False
 user = True
 read_ok = False
@@ -765,7 +780,7 @@ lower_2_img = pygame.image.load('图片\减速1.png')
 coins_two_img = pygame.image.load('图片\金币翻倍.png')
 coins_two_2_img = pygame.image.load('图片\金币翻倍1.png')
 
-pygame.mixer.music.load('音乐\游戏音乐.mp3')
+pygame.mixer.music.load('音乐\游戏音乐.wav')
 dianji = pygame.mixer.Sound('音乐\游戏点击音效.wav')
 win_sound = pygame.mixer.Sound('音乐\获胜.wav')
 game_over_sound = pygame.mixer.Sound('音乐\游戏结束！.wav')
@@ -3254,7 +3269,7 @@ def level_no():
 
 
 def level_start():
-    global ticks, player_X, player_Y, player_x, player_y, score, fps, hp_coloer, hp, hp_3, player_img, a, player_speed_4
+    global ticks, player_X, player_Y, player_x, player_y, score, fps, hp_coloer, hp, hp_3, player_img, a, player_speed_4, clock, ko, clock_2, clock_3
     hp = hp_3
     fps = fps_1
     player_speed = player_speed_4
@@ -3262,6 +3277,7 @@ def level_start():
         play_game()
     else:
         while True:
+            player_img = pygame.image.load('图片\玩家1.png')
             clock.tick(fps)
             ticks += 1
             screen.blit(bg_img, (0, 0))
@@ -3325,97 +3341,7 @@ def level_start():
                         level_select()
 
                     elif event.key == ord('t'):
-                        while True:
-                            clock.tick(5)
-                            screen.blit(bg_img, (0, 0))
-                            screen.blit(player_img, (player_X, player_Y))
-                            for e in dicis:
-                                screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
-
-                            for e in dicis_2:
-                                screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
-
-                            for e in dicis_3:
-                                screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
-
-                            for e in bullets:
-                                screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
-
-                            text = upgrade.render(f'{score}', True, (green))
-                            screen.blit(text, (370, 0))
-
-                            text = upgrade.render(f'{hp}', True, (hp_coloer))
-                            screen.blit(text, (760, 560))
-
-                            text = a_00.render('暂停', True, (red))
-                            screen.blit(text, (120, 150))
-
-                            text = stop_tips_1.render('返回', True, (red))
-                            screen.blit(text, (100, 220))
-
-                            text = stop_tips_1.render('继续游戏', True, (red))
-                            screen.blit(text, (100, 270))
-
-                            text = stop_tips_1.render('重新开始', True, (red))
-                            screen.blit(text, (100, 320))
-
-                            text = stop_tips_1.render('返回主页', True, (red))
-                            screen.blit(text, (100, 370))
-
-                            text = stop_tips_1.render('退出游戏', True, (red))
-                            screen.blit(text, (100, 420))
-
-                            if tips == True:
-                                text = stop_tips_1.render('R.', True, (red))
-                                screen.blit(text, (60, 220))
-
-                                text = stop_tips_1.render('C.', True, (red))
-                                screen.blit(text, (60, 270))
-
-                                text = stop_tips_1.render('H.', True, (red))
-                                screen.blit(text, (60, 370))
-
-                                text = stop_tips_1.render('E.', True, (red))
-                                screen.blit(text, (60, 320))
-
-                                text = stop_tips_1.render('Q.', True, (red))
-                                screen.blit(text, (60, 420))
-
-                            for event in pygame.event.get():
-                                if event.type == QUIT:
-                                    dianji.play()
-                                    quit_game()
-
-                                elif event.type == KEYDOWN:
-                                    if event.key == ord('r'):
-                                        dianji.play()
-                                        restet_all()
-                                        level_select()
-
-                                    elif event.key == ord('c'):
-                                        dianji.play()
-                                        level_start()
-
-                                    elif event.key == ord('h'):
-                                        dianji.play()
-                                        restet_all()
-                                        home_page()
-
-                                    elif event.key == ord('q'):
-                                        dianji.play()
-                                        restet_all()
-                                        game_quit()
-
-                                    elif event.key == ord('e'):
-                                        dianji.play()
-                                        restet_all_2()
-                                        xing_xi()
-
-                                    elif event.key == K_ESCAPE:
-                                        dianji.play()
-                                        level_start()
-
-                            pygame.display.update()
+                        zan_tin()
 
                 elif event.type == KEYUP:
                     player_x = 0
@@ -3435,91 +3361,6 @@ def level_start():
 
             elif player_Y < 0:
                 player_Y = 0
-
-            for e in dicis:
-                e.dici_Y += e.dici_speed
-                if e.dici_Y > 567:
-                    e.restet()
-
-                screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
-
-                if (hurt(player_X, player_Y, e.dici_X, e.dici_Y) < 52):
-                    e.restet()
-                    if hp > 0:
-                        hp -= 1
-                        clock.tick(52)
-                        pygame.display.update()
-                        screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
-                        pygame.display.update()
-                        player_ko()
-
-
-
-            if ok_2 == True or ok_3 == True or ok_4 == True or ok_5 == True:
-                for e in dicis_2:
-                    e.dici_2_Y += e.dici_2_speed
-                    if e.dici_2_Y > 567:
-                        e.restet_2()
-
-                    screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
-
-                    if (hurt(player_X, player_Y, e.dici_2_X, e.dici_2_Y) < 58):
-                        e.restet_2()
-                        if hp > 0:
-                            hp -= 1
-                            clock.tick(52)
-                            pygame.display.update()
-                            screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
-                            pygame.display.update()
-                            player_ko()
-
-
-
-            if ok_5 == True:
-                for e in bullets:
-
-                    if e.dici_3_bullet_X > 764:
-                        e.bullet_restet()
-
-                    k = random.randint(0, 2)
-                    if k == 0:
-                        e.dici_3_bullet_X += e.dici_3_bullet_speed
-
-                    elif k == 1:
-                        e.dici_3_bullet_X += 2
-                        e.dici_3_bullet_Y -= 1
-
-                    else:
-                        e.dici_3_bullet_X += 2
-                        e.dici_3_bullet_Y += 1
-
-                    screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
-
-                    if (hurt(player_X, player_Y, e.dici_3_bullet_X, e.dici_3_bullet_Y) < 64):
-                        e.bullet_restet()
-                        if hp > 0:
-                            hp -= 1
-                            clock.tick(52)
-                            screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
-                            pygame.display.update()
-                            player_ko()
-
-                for e in dicis_3:
-                    e.dici_3_Y += e.dici_3_speed
-                    if e.dici_3_Y > 548:
-                        e.restet_3()
-
-                    screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
-
-                    if (hurt(player_X, player_Y, e.dici_3_X, e.dici_3_Y) < 55):
-                        e.restet_3()
-                        if hp > 0:
-                            hp -= 1
-                            clock.tick(52)
-                            pygame.display.update()
-                            screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
-                            pygame.display.update()
-                            player_ko()
 
             text = upgrade.render(f'{score}', True, (green))
             screen.blit(text, (370, 0))
@@ -3550,10 +3391,337 @@ def level_start():
             elif score >= 300:
                 screen.blit(bg_img, (0, 0))
                 win()
+            
+            
 
+            for e in dicis:
+                e.dici_Y += e.dici_speed
+                if e.dici_Y > 567:
+                    e.restet()
+
+                screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
+
+                if (hurt(player_X, player_Y, e.dici_X, e.dici_Y) < 52):
+                    e.restet()
+                    if hp > 0:
+                        hp -= 1
+                        pygame.display.update()
+                        screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
+                        pygame.display.update()
+                        ko = True
+                        clock_2 = pygame.time.Clock()
+                        clock_3 = 0
+                        while ko:
+                            clock_3 += clock_2.tick()
+                            if clock_3 >= 80 and clock_3 <= 120:
+                                player_img = pygame.image.load('图片\玩家坠毁1.png')
+                                screen.blit(player_img, (player_X, player_Y))
+                                pygame.display.update()
+                                player_img = pygame.image.load('图片\玩家坠毁1.png')
+                                screen.blit(player_img, (player_X, player_Y))
+                                pygame.display.update()
+                            elif clock_3 >= 120 and clock_3 <= 160:
+                                player_img = pygame.image.load('图片\玩家坠毁2.png')
+                                screen.blit(player_img, (player_X, player_Y))
+                                pygame.display.update()
+                                player_img = pygame.image.load('图片\玩家坠毁2.png')
+                                screen.blit(player_img, (player_X, player_Y))
+                                pygame.display.update()
+                            elif clock_3 >= 160 and clock_3 <= 200:
+                                player_img = pygame.image.load('图片\玩家坠毁3.png')
+                                screen.blit(player_img, (player_X, player_Y))
+                                pygame.display.update()
+                                player_img = pygame.image.load('图片\玩家坠毁3.png')
+                                screen.blit(player_img, (player_X, player_Y))
+                                pygame.display.update()
+                            elif clock_3 >= 200 and clock_3 <= 240:
+                                ko = False
+                            for event in pygame.event.get():
+                                if event.type == QUIT:
+                                    dianji.play()
+                                    quit_game()
+                                elif event.type == KEYDOWN:
+                                    if event.key == ord('r'):
+                                        dianji.play()
+                                        quit_game()
+                                    elif event.key == ESCAPE:
+                                        dianji.play()
+                                        quit_game()
+
+
+
+            if ok_2 == True or ok_3 == True or ok_4 == True or ok_5 == True:
+                for e in dicis_2:
+                    e.dici_2_Y += e.dici_2_speed
+                    if e.dici_2_Y > 567:
+                        e.restet_2()
+
+                    screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
+
+                    if (hurt(player_X, player_Y, e.dici_2_X, e.dici_2_Y) < 58):
+                        e.restet_2()
+                        if hp > 0:
+                            hp -= 1
+                            pygame.display.update()
+                            screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
+                            pygame.display.update()
+                            ko = True
+                            clock_2 = pygame.time.Clock()
+                            clock_3 = 0
+                            while ko:
+                                clock_3 += clock_2.tick()
+                                if clock_3 >= 80 and clock_3 <= 120:
+                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                elif clock_3 >= 120 and clock_3 <= 160:
+                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                elif clock_3 >= 160 and clock_3 <= 200:
+                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                elif clock_3 >= 200 and clock_3 <= 240:
+                                    ko = False
+                                for event in pygame.event.get():
+                                    if event.type == QUIT:
+                                        dianji.play()
+                                        quit_game()
+                                    elif event.type == KEYDOWN:
+                                        if event.key == ord('r'):
+                                            dianji.play()
+                                            quit_game()
+                                        elif event.key == ESCAPE:
+                                            dianji.play()
+                                            quit_game()
+
+
+
+            if ok_5 == True:
+                for e in bullets:
+
+                    if e.dici_3_bullet_X > 764:
+                        e.bullet_restet()
+
+                    k = random.randint(0, 2)
+                    if k == 0:
+                        e.dici_3_bullet_X += e.dici_3_bullet_speed
+
+                    elif k == 1:
+                        e.dici_3_bullet_X += 2
+                        e.dici_3_bullet_Y -= 1
+
+                    else:
+                        e.dici_3_bullet_X += 2
+                        e.dici_3_bullet_Y += 1
+
+                    screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
+
+                    if (hurt(player_X, player_Y, e.dici_3_bullet_X, e.dici_3_bullet_Y) < 64):
+                        e.bullet_restet()
+                        if hp > 0:
+                            hp -= 1
+                            screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
+                            pygame.display.update()
+                            ko = True
+                            clock_2 = pygame.time.Clock()
+                            clock_3 = 0
+                            while ko:
+                                clock_3 += clock_2.tick()
+                                if clock_3 >= 80 and clock_3 <= 120:
+                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                elif clock_3 >= 120 and clock_3 <= 160:
+                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                elif clock_3 >= 160 and clock_3 <= 200:
+                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                elif clock_3 >= 200 and clock_3 <= 240:
+                                    ko = False
+                                for event in pygame.event.get():
+                                    if event.type == QUIT:
+                                        dianji.play()
+                                        quit_game()
+                                    elif event.type == KEYDOWN:
+                                        if event.key == ord('r'):
+                                            dianji.play()
+                                            quit_game()
+                                        elif event.key == ESCAPE:
+                                            dianji.play()
+                                            quit_game()
+
+                for e in dicis_3:
+                    e.dici_3_Y += e.dici_3_speed
+                    if e.dici_3_Y > 548:
+                        e.restet_3()
+
+                    screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
+
+                    if (hurt(player_X, player_Y, e.dici_3_X, e.dici_3_Y) < 55):
+                        e.restet_3()
+                        if hp > 0:
+                            hp -= 1
+                            pygame.display.update()
+                            screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
+                            pygame.display.update()
+                            ko = True
+                            clock = pygame.time.Clock()
+                            clock_3 = 0
+                            while ko:
+                                clock_3 += clock_2.tick()
+                                if clock_3 >= 80 and clock_3 <= 120:
+                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                elif clock_3 >= 120 and clock_3 <= 160:
+                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                elif clock_3 >= 160 and clock_3 <= 200:
+                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
+                                    screen.blit(player_img, (player_X, player_Y))
+                                    pygame.display.update()
+                                elif clock_3 >= 200 and clock_3 <= 240:
+                                    ko = False
+                                for event in pygame.event.get():
+                                    if event.type == QUIT:
+                                        dianji.play()
+                                        quit_game()
+                                    elif event.type == KEYDOWN:
+                                        if event.key == ord('r'):
+                                            dianji.play()
+                                            quit_game()
+                                        elif event.key == ESCAPE:
+                                            dianji.play()
+                                            quit_game()
+                                    
             pygame.display.update()
 
 
+
+def zan_tin():
+    screen.blit(bg_img, (0, 0))
+    screen.blit(player_img, (player_X, player_Y))
+    for e in dicis:
+        screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
+
+    for e in dicis_2:
+        screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
+
+    for e in dicis_3:
+        screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
+
+    for e in bullets:
+        screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
+    
+    text = upgrade.render(f'{score}', True, (green))
+    screen.blit(text, (370, 0))
+
+    text = upgrade.render(f'{hp}', True, (hp_coloer))
+    screen.blit(text, (760, 560))
+
+    text = a_00.render('暂停', True, (red))
+    screen.blit(text, (120, 150))
+
+    text = stop_tips_1.render('返回', True, (red))
+    screen.blit(text, (100, 220))
+
+    text = stop_tips_1.render('继续游戏', True, (red))
+    screen.blit(text, (100, 270))
+
+    text = stop_tips_1.render('重新开始', True, (red))
+    screen.blit(text, (100, 320))
+
+    text = stop_tips_1.render('返回主页', True, (red))
+    screen.blit(text, (100, 370))
+
+    text = stop_tips_1.render('退出游戏', True, (red))
+    screen.blit(text, (100, 420))
+
+    if tips == True:
+       text = stop_tips_1.render('R.', True, (red))
+       screen.blit(text, (60, 220))
+
+       text = stop_tips_1.render('C.', True, (red))
+       screen.blit(text, (60, 270))
+
+       text = stop_tips_1.render('H.', True, (red))
+       screen.blit(text, (60, 370))
+
+       text = stop_tips_1.render('E.', True, (red))
+       screen.blit(text, (60, 320))
+
+       text = stop_tips_1.render('Q.', True, (red))
+       screen.blit(text, (60, 420))                            
+       pygame.display.update()
+
+    while True:
+       clock.tick(5)
+       for event in pygame.event.get():
+           if event.type == QUIT:
+               dianji.play()
+               quit_game()
+
+           elif event.type == KEYDOWN:
+               if event.key == ord('r'):
+                   dianji.play()
+                   restet_all()
+                   level_select()
+
+               elif event.key == ord('c'):
+                   dianji.play()
+                   level_start()
+
+               elif event.key == ord('h'):
+                   dianji.play()
+                   restet_all()
+                   home_page()
+
+               elif event.key == ord('q'):
+                   dianji.play()
+                   restet_all()
+                   quit_game()
+
+               elif event.key == ord('e'):
+                   dianji.play()
+                   restet_all_2()
+                   xing_xi()
+
+               elif event.key == K_ESCAPE:
+                   dianji.play()
+                   level_start()
 
 def restet_all():
     global hp, hp_3, player_speed, player_speed_4, hui_fu_ci_shu, su_du_ci_shu, lower_ci_shu, coins_two_ci_shu, player_X, player_Y, player_x, player_y, score, coins_two, wins, game_overs
@@ -3636,21 +3804,6 @@ def restet_all_2():
     wins = False
     game_overs = False
     save()
-
-
-
-def player_ko():
-    player_img = pygame.image.load('图片\玩家坠毁1.png')
-    screen.blit(player_img, (player_X, player_Y))
-    pygame.display.update()
-    player_img = pygame.image.load('图片\玩家坠毁2.png')
-    screen.blit(player_img, (player_X, player_Y))
-    pygame.display.update()
-    player_img = pygame.image.load('图片\玩家坠毁3.png')
-    screen.blit(player_img, (player_X, player_Y))
-    pygame.display.update()
-    clock.tick(fps)
-    player_img = pygame.image.load('图片\玩家1.png')
 
 
 
@@ -4930,7 +5083,7 @@ class donut():
             text = upgrade.render('你的光荣历程在这被记载的仔仔细细', True, (green))
             screen.blit(text, (130, 220))
             if die_number > 6:
-                text = upgrade.render('玩游戏吗快乐就行~', True, (green))
+                text = upgrade.render('玩游戏嘛快乐就行~', True, (green))
                 screen.blit(text, (150, 250))
             elif starts >= 4 and die_number < 6:
                 text = upgrade.render('我的辉煌战绩真好看', True, (green))
@@ -5352,15 +5505,15 @@ def home_page():
         screen.blit(text, (32, 0))
 
         text = tips_game.render('健康游戏忠告：', True, (black))
-        screen.blit(text, (0, 490))
+        screen.blit(text, (0, 500))
         text = tips_game.render('抵制不良游戏，拒绝盗版游戏。', True, (black))
-        screen.blit(text, (0, 510))
+        screen.blit(text, (0, 520))
         text = tips_game.render('注意自我保护，谨防上当受骗。', True, (black))
-        screen.blit(text, (0, 530))
+        screen.blit(text, (0, 540))
         text = tips_game.render('适度游戏益脑，沉迷游戏伤身。', True, (black))
-        screen.blit(text, (0, 550))
+        screen.blit(text, (0, 560))
         text = tips_game.render('合理安排时间，享受健康生活。', True, (black))
-        screen.blit(text, (0, 570))
+        screen.blit(text, (0, 580))
 
         if tips == True:
             text = coins_look.render('空格', True, (green))
