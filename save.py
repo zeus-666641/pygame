@@ -1,8 +1,8 @@
 #coding:cp936
-name = '存档'
-fps = 64
+name = '存档1'
+fps = 96
 tips = True
-sound = 0.25
+sound = 0.5
 sound_4 = 0
 coins = 0
 player_speed_3 = False
@@ -20,6 +20,7 @@ first_cheng_jiu_open = False
 first_shop_open = False
 first_upgrade_open = False
 first_tong_ji_open = False
+first_upgrade_dao_ju_open = False
 first_dui_huan_open = False
 
 first_enter_cheng_jiu = False
@@ -32,6 +33,7 @@ cheng_jiu_open = False
 shop_open = False
 upgrade_open = False
 tong_ji_open = False
+upgrade_dao_ju_open = False
 dui_huan_open = False
 
 su_du_upgrade_number = 0
@@ -70,7 +72,7 @@ cheng_jiu_cishu_12 = False
 cheng_jiu_cishu_13 = False
 cheng_jiu_cishu_14 = False
 
-coins_dui_huan_1 = False
+coins_dui_huan_1 = True
 coins_dui_huan_2 = False
 coins_dui_huan_3 = False
 coins_dui_huan_4 = False
@@ -100,3 +102,8 @@ level_2_donut = False
 level_3_donut = False
 level_4_donut = False
 level_5_donut = False
+
+first_buy = 1
+
+shop_newer_tips = 1
+dui_huan_newer_tips = False
