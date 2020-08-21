@@ -3,6 +3,7 @@ import pygame, random, os
 from pygame.locals import *
 from time import sleep
 from math import sqrt
+
 pygame.init()
 
 game_dir = os.getcwd()
@@ -243,6 +244,7 @@ first_cheng_jiu_open = {first_cheng_jiu_open}
 first_shop_open = {first_shop_open}
 first_upgrade_open = {first_upgrade_open}
 first_tong_ji_open = {first_tong_ji_open}
+first_upgrade_dao_ju_open = {first_upgrade_dao_ju_open}
 first_dui_huan_open = {first_dui_huan_open}
 
 first_enter_cheng_jiu = {first_enter_cheng_jiu}
@@ -255,6 +257,7 @@ cheng_jiu_open = {cheng_jiu_open}
 shop_open = {shop_open}
 upgrade_open = {upgrade_open}
 tong_ji_open = {tong_ji_open}
+upgrade_dao_ju_open = {upgrade_dao_ju_open}
 dui_huan_open = {dui_huan_open}
 
 su_du_upgrade_number = {su_du_upgrade_number}
@@ -322,7 +325,13 @@ level_1_donut = {level_1_donut}
 level_2_donut = {level_2_donut}
 level_3_donut = {level_3_donut}
 level_4_donut = {level_4_donut}
-level_5_donut = {level_5_donut}''')
+level_5_donut = {level_5_donut}
+
+first_buy = {first_buy}
+
+shop_newer_tips = {shop_newer_tips}
+dui_huan_newer_tips = {dui_huan_newer_tips}
+''')
     save_open.close()
 
     save_open_2 = open('game_save.py', 'w')
@@ -347,7 +356,7 @@ def default_save_name_pan_duan():
         user_3 = True
 
 def user_pan_duan():
-    global name, player_speed, player_speed_00, player_speed_4, fps, fps_1, sound, sound_1, sound_4, sound_5, hp, hp_3, hp_00, coins, die_number, e, open_level, level_ok_number, starts, starts_open_1, starts_open_2, starts_open_3, starts_open_4, starts_open_5, cheng_jiu_cishu_1, cheng_jiu_cishu_2, cheng_jiu_cishu_3, cheng_jiu_cishu_4, cheng_jiu_cishu_5, cheng_jiu_cishu_6, cheng_jiu_cishu_7, cheng_jiu_cishu_8, cheng_jiu_cishu_9, cheng_jiu_cishu_10, cheng_jiu_cishu_11, cheng_jiu_cishu_12, cheng_jiu_cishu_13, cheng_jiu_cishu_14, coins_dui_huan_1, coins_dui_huan_2, coins_dui_huan_3, coins_dui_huan_4, coins_dui_huan_5, coins_dui_huan_6, coins_dui_huan_7, coins_dui_huan_8, coins_dui_huan_9, coins_dui_huan_10, coins_dui_huan_11, first_level_1, first_level_2, first_level_3, first_level_4, first_level_5, tips, tips_1, player_speed_3, hp_2, tong_guan_1, tong_guan_2, tong_guan_3, tong_guan_4, tong_guan_5, su_du_upgrade_number, hp_upgrade_number, upgrade_number, hui_fu_number, su_du_number, lower_number, coins_two_number, dao_ju_hp_level, dao_ju_su_du_level, dao_ju_lower_level, dao_ju_coins_two_level, read_ok, first_cheng_jiu_open, first_shop_open, first_upgrade_open, first_tong_ji_open, first_dui_huan_open, first_enter_cheng_jiu, first_enter_shop, first_enter_upgrade, first_enter_tong_ji, first_enter_dui_huan, cheng_jiu_open, shop_open, upgrade_open, tong_ji_open, dui_huan_open, first_open_game, save_name_true, donut_open, level_1_donut, level_2_donut, level_3_donut, level_4_donut, level_5_donut
+    global name, player_speed, player_speed_00, player_speed_4, fps, fps_1, sound, sound_1, sound_4, sound_5, hp, hp_3, hp_00, coins, die_number, e, open_level, level_ok_number, starts, starts_open_1, starts_open_2, starts_open_3, starts_open_4, starts_open_5, cheng_jiu_cishu_1, cheng_jiu_cishu_2, cheng_jiu_cishu_3, cheng_jiu_cishu_4, cheng_jiu_cishu_5, cheng_jiu_cishu_6, cheng_jiu_cishu_7, cheng_jiu_cishu_8, cheng_jiu_cishu_9, cheng_jiu_cishu_10, cheng_jiu_cishu_11, cheng_jiu_cishu_12, cheng_jiu_cishu_13, cheng_jiu_cishu_14, coins_dui_huan_1, coins_dui_huan_2, coins_dui_huan_3, coins_dui_huan_4, coins_dui_huan_5, coins_dui_huan_6, coins_dui_huan_7, coins_dui_huan_8, coins_dui_huan_9, coins_dui_huan_10, coins_dui_huan_11, first_level_1, first_level_2, first_level_3, first_level_4, first_level_5, tips, tips_1, player_speed_3, hp_2, tong_guan_1, tong_guan_2, tong_guan_3, tong_guan_4, tong_guan_5, su_du_upgrade_number, hp_upgrade_number, upgrade_number, hui_fu_number, su_du_number, lower_number, coins_two_number, dao_ju_hp_level, dao_ju_su_du_level, dao_ju_lower_level, dao_ju_coins_two_level, read_ok, first_cheng_jiu_open, first_shop_open, first_upgrade_open, first_tong_ji_open, first_upgrade_dao_ju_open, first_dui_huan_open, first_enter_cheng_jiu, first_enter_shop, first_enter_upgrade, first_enter_tong_ji, first_enter_dui_huan, cheng_jiu_open, shop_open, upgrade_open, tong_ji_open, upgrade_dao_ju_open, dui_huan_open, first_open_game, save_name_true, donut_open, level_1_donut, level_2_donut, level_3_donut, level_4_donut, level_5_donut, first_buy, shop_newer_tips, dui_huan_newer_tips
     import save_1, save_2, save_3
     default_save_name_pan_duan()
     if user == True:
@@ -376,6 +385,7 @@ def user_pan_duan():
         first_shop_open = save_1.first_shop_open
         first_upgrade_open = save_1.first_upgrade_open
         first_tong_ji_open = save_1.first_tong_ji_open
+        first_upgrade_dao_ju_open = save_1.first_upgrade_dao_ju_open
         first_dui_huan_open = save_1.first_dui_huan_open
         
         first_enter_cheng_jiu = save_1.first_enter_cheng_jiu
@@ -388,6 +398,7 @@ def user_pan_duan():
         shop_open = save_1.shop_open
         upgrade_open = save_1.upgrade_open
         tong_ji_open = save_1.tong_ji_open
+        upgrade_dao_ju_open = save_1.upgrade_dao_ju_open
         dui_huan_open = save_1.dui_huan_open
 
         starts = save_1.starts
@@ -461,6 +472,11 @@ def user_pan_duan():
         level_3_donut = save_1.level_3_donut
         level_4_donut = save_1.level_4_donut
         level_5_donut = save_1.level_5_donut
+
+        first_buy = save_1.first_buy
+
+        shop_newer_tips = save_1.shop_newer_tips
+        dui_huan_newer_tips = save_1.dui_huan_newer_tips
         
         read_ok = True
         save()
@@ -491,6 +507,7 @@ def user_pan_duan():
         first_shop_open = save_2.first_shop_open
         first_upgrade_open = save_2.first_upgrade_open
         first_tong_ji_open = save_2.first_tong_ji_open
+        first_upgrade_dao_ju_open = save_2.first_upgrade_dao_ju_open
         first_dui_huan_open = save_2.first_dui_huan_open
         
         first_enter_cheng_jiu = save_2.first_enter_cheng_jiu
@@ -503,6 +520,7 @@ def user_pan_duan():
         shop_open = save_2.shop_open
         upgrade_open = save_2.upgrade_open
         tong_ji_open = save_2.tong_ji_open
+        upgrade_dao_ju_open = save_2.upgrade_dao_ju_open
         dui_huan_open = save_2.dui_huan_open
 
         starts = save_2.starts
@@ -576,6 +594,11 @@ def user_pan_duan():
         level_3_donut = save_2.level_3_donut
         level_4_donut = save_2.level_4_donut
         level_5_donut = save_2.level_5_donut
+
+        first_buy = save_2.first_buy
+
+        shop_newer_tips = save_2.shop_newer_tips
+        dui_huan_newer_tips = save_2.dui_huan_newer_tips
         
         read_ok = True
         save()
@@ -606,12 +629,14 @@ def user_pan_duan():
         first_shop_open = save_3.first_shop_open
         first_upgrade_open = save_3.first_upgrade_open
         first_tong_ji_open = save_3.first_tong_ji_open
+        first_upgrade_dao_ju_open = save_3.first_upgrade_dao_ju_open
         first_dui_huan_open = save_3.first_dui_huan_open
 
         cheng_jiu_open = save_3.cheng_jiu_open
         shop_open = save_3.shop_open
         upgrade_open = save_3.upgrade_open
         tong_ji_open = save_3.tong_ji_open
+        upgrade_dao_ju_open = save_3.upgrade_dao_ju_open
         dui_huan_open = save_3.dui_huan_open
         
         first_enter_cheng_jiu = save_3.first_enter_cheng_jiu
@@ -692,6 +717,11 @@ def user_pan_duan():
         level_4_donut = save_3.level_4_donut
         level_5_donut = save_3.level_5_donut
 
+        first_buy = save_3.first_buy
+
+        shop_newer_tips = save_3.shop_newer_tips
+        dui_huan_newer_tips = save_3.dui_huan_newer_tips
+
         read_ok = True
         save()
 
@@ -757,6 +787,9 @@ shop_donut = False
 upgrade_donut = False
 tong_ji_donut = False
 dui_huan_donut = False
+
+in_shop = False
+in_dui_huan = False
 
 bg_img_2 = pygame.image.load('图片\背景.png')
 coins_img = pygame.image.load('图片\金币.png')
@@ -854,8 +887,8 @@ def set_o():
         game_over_sound.set_volume(sound)
         pygame.mixer.music.set_volume(sound_4)
 
-        if fps_1 > 96:
-            fps_1 = 96
+        if fps_1 >= 128:
+            fps_1 = 128
 
         elif fps_1 < 32:
             fps_1 = 32
@@ -1273,13 +1306,24 @@ def user_select():
         screen.fill(white)
         back()
 
-        if len(save_1.name) >= 5:
+        if len(save_1.name) == 1:
             text = upgrade.render(f'{save_1.name}', True, (black))
-            screen.blit(text, (340, 25))
-
-        else:
+            screen.blit(text, (360, 30))
+        elif len(save_1.name) == 2:
             text = upgrade.render(f'{save_1.name}', True, (black))
-            screen.blit(text, (360, 25))
+            screen.blit(text, (345, 30))
+        elif len(save_1.name) == 3:
+            text = upgrade.render(f'{save_1.name}', True, (black))
+            screen.blit(text, (330, 30))
+        elif len(save_1.name) == 4:
+            text = upgrade.render(f'{save_1.name}', True, (black))
+            screen.blit(text, (315, 30))
+        elif len(save_1.name) == 5:
+            text = upgrade.render(f'{save_1.name}', True, (black))
+            screen.blit(text, (300, 30))
+        elif len(save_1.name) == 6:
+            text = upgrade.render(f'{save_1.name}', True, (black))
+            screen.blit(text, (285, 30))
 
         text = shop_1.render('累计通关：', True, (black))
         screen.blit(text, (15, 75))
@@ -1313,13 +1357,24 @@ def user_select():
 
 
 
-        if len(save_1.name) >= 5:
+        if len(save_2.name) == 1:
             text = upgrade.render(f'{save_2.name}', True, (black))
-            screen.blit(text, (340, 205))
-
-        else:
+            screen.blit(text, (360, 210))
+        elif len(save_2.name) == 2:
             text = upgrade.render(f'{save_2.name}', True, (black))
-            screen.blit(text, (360, 205))
+            screen.blit(text, (345, 210))
+        elif len(save_2.name) == 3:
+            text = upgrade.render(f'{save_2.name}', True, (black))
+            screen.blit(text, (330, 210))
+        elif len(save_2.name) == 4:
+            text = upgrade.render(f'{save_2.name}', True, (black))
+            screen.blit(text, (315, 210))
+        elif len(save_2.name) == 5:
+            text = upgradea.render(f'{save_2.name}', True, (black))
+            screen.blit(text, (300, 210))
+        elif len(save_2.name) == 6:
+            text = upgrade.render(f'{save_2.name}', True, (black))
+            screen.blit(text, (285, 210))
 
         text = shop_1.render('累计通关：', True, (black))
         screen.blit(text, (15, 255))
@@ -1354,13 +1409,24 @@ def user_select():
 
 
 
-        if len(save_1.name) >= 5:
+        if len(save_3.name) == 1:
             text = upgrade.render(f'{save_3.name}', True, (black))
-            screen.blit(text, (340, 385))
-
-        else:
+            screen.blit(text, (360, 390))
+        elif len(save_3.name) == 2:
             text = upgrade.render(f'{save_3.name}', True, (black))
-            screen.blit(text, (360, 385))
+            screen.blit(text, (350, 390))
+        elif len(save_3.name) == 3:
+            text = upgrade.render(f'{save_3.name}', True, (black))
+            screen.blit(text, (340, 390))
+        elif len(save_3.name) == 4:
+            text = upgrade.render(f'{save_3.name}', True, (black))
+            screen.blit(text, (330, 390))
+        elif len(save_3.name) == 5:
+            text = upgrade.render(f'{save_3.name}', True, (black))
+            screen.blit(text, (320, 390))
+        elif len(save_3.name) == 6:
+            text = upgrade.render(f'{save_3.name}', True, (black))
+            screen.blit(text, (310, 390))
 
         text = shop_1.render(f'累计通关：', True, (black))
         screen.blit(text, (15, 435))
@@ -1494,9 +1560,9 @@ def geng_ming_save():
     screen.blit(text, (280, 240))
     pygame.display.update()
     n = input('''
-请输入要改成的名字（最多五个字符）：''')
-    if len(n) > 5:
-        print('更改后的存档名最多只能有5个字符！')
+请输入要改成的名字（最多六个字符）：''')
+    if len(n) > 6:
+        print('更改后的存档名最多只能有6个字符！')
         geng_ming_save()
     while True:
         screen.fill(white)
@@ -1627,6 +1693,9 @@ def upgrade_player():
 
         clock.tick(5)
         screen.fill(white)
+        screen.blit(coins_img, (338, 0))
+        text = a.render(f'{coins}', True, (black))
+        screen.blit(text, (370, 0))
         if ticks % 12 < 6:
             screen.blit(player_img_3, (50, 50))
         else:
@@ -1706,8 +1775,9 @@ def upgrade_player():
         text = upgrade.render(f'血量：{hp}            升级（{hp_upgrade_coins}金币）', True, (black))
         screen.blit(text, (300, 150))
 
-        text = coins_look.render(f'道具升级==》', True, (black))
-        screen.blit(text, (630, 0))
+        if upgrade_dao_ju_open == True:
+            text = coins_look.render(f'道具升级==》', True, (black))
+            screen.blit(text, (630, 0))
 
         if tips == True:
             text = shop_1.render('1', True, (black))
@@ -1716,8 +1786,9 @@ def upgrade_player():
             text = shop_1.render('2', True, (black))
             screen.blit(text, (460, 120))
 
-            text = shop_1.render('D', True, (black))
-            screen.blit(text, (670 ,25))
+            if upgrade_dao_ju_open == True:
+                text = shop_1.render('D', True, (black))
+                screen.blit(text, (670 ,25))
 
         for event in pygame.event.get():
             if event.type == QUIT:
@@ -1766,9 +1837,10 @@ def upgrade_player():
                     upgrade_number += 1
                     hp_upgrade_number += 1
 
-                elif event.key == ord('d') or event.key == K_LEFT:
-                    dianji.play()
-                    upgrade_dao_ju()
+                if upgrade_dao_ju_open == True:
+                    if event.key == ord('d') or event.key == K_LEFT:
+                        dianji.play()
+                        upgrade_dao_ju()
 
         pygame.display.update()
 
@@ -1787,6 +1859,9 @@ def upgrade_dao_ju():
         screen.blit(hui_fu_2_img, (25, 50))
         screen.blit(su_du_2_img, (25, 182))
         screen.blit(lower_2_img, (25, 314))
+        screen.blit(coins_img, (338, 0))
+        text = a.render(f'{coins}', True, (black))
+        screen.blit(text, (370, 0))
         back()
 
         text = upgrade.render(f'生命增加', True, (black))
@@ -2163,12 +2238,12 @@ def cheng_jiu():
 
 
         back()
-        if dui_huan_open == True:
+        if cheng_jiu_1_coins >= 7 or starts >= 7:
             text = coins_look.render('兑换↑', True, (black))
             screen.blit(text, (180, 0))
 
         if tips == True:
-            if dui_huan_open == True:
+            if cheng_jiu_1_coins >= 7 or starts >= 7:
                 text = coins_look.render('H', True, (green))
                 screen.blit(text ,(260, 0))
 
@@ -2274,13 +2349,23 @@ def coins_dui_huan():
             dui_huan_donut = True
             first_enter_dui_huan = True
             donut.block_open_donut()            # 显示第一次进入兑换界面时的旁白
+
+    if dui_huan_newer_tips == False:            # 如果未显示此界面的新手提示
+        newer_tips.def_dui_huan_newer_tips()
+    cheng_jiu_pan_duan()            # 判断有多少个成就解锁（或未解锁）
     while True:
         clock.tick(5)
         screen.fill(white)
         back()
+        text = upgrade.render(f'★ x {starts}', True, (blue))
+        screen.blit(text, (170, 0))
+
         screen.blit(coins_img, (338, 0))
         text = a.render(f'{coins}', True, (black))
         screen.blit(text, (370, 0))
+
+        text = upgrade.render(f'★ x {cheng_jiu_1_coins}', True, (yellow))
+        screen.blit(text, (570, 0))
         if tips == True:
             text = shop_1.render('使用数字键选择来兑换金币（最左为1，以此类推……）', True, (black))
             screen.blit(text, (80, 560))
@@ -2863,22 +2948,28 @@ def man():
 
 
 def game_shop():
-    global coins, hui_fu_number, su_du_number, lower_number, coins_two_number, e, first_enter_shop, shop_donut
+    global coins, hui_fu_number, su_du_number, lower_number, coins_two_number, e, first_enter_shop, shop_donut, first_buy, in_shop
+    in_shop = True
     if donut_open == 1 or donut_open == 2:
         if first_enter_shop == False:
             shop_donut = True
             first_enter_shop = True
             donut.block_open_donut()            # 显示第一次进入游戏商店界面时的旁白
+
     if tong_guan_5 == True:
         coins_two_coins = 24
 
     else:
         coins_two_coins = 6
+
     dao_ju_zeng_jia()
     while True:
         cheng_jiu_0()
         clock.tick(5)
         screen.fill(white)
+        if first_buy == 2:          # 如果已经第一次购买了道具，但没有提示时
+            first_buy = 3
+            newer_tips.def_shop_newer_tips()            # 显示第一次购买道具时的提示
         for event in pygame.event.get():
             if event.type == QUIT:
                 dianji.play()
@@ -2889,14 +2980,18 @@ def game_shop():
                 if event.key == ord('r'):
                     dianji.play()
                     save()
+                    in_shop = False
                     home_page()
 
                 elif event.key == K_ESCAPE:
                     dianji.play()
                     save()
+                    in_shop = False
                     home_page()
 
                 elif event.key == K_1:
+                    if first_buy == 1:          # 如果还未购买过一次道具
+                        first_buy = 2
                     if coins < hui_fu_coins:
                         no_coins_2()
 
@@ -2906,6 +3001,8 @@ def game_shop():
                         hui_fu_number += 1
 
                 elif event.key == K_2:
+                    if first_buy == 1:          # 如果还未购买过一次道具
+                        first_buy = 2
                     if coins < su_du_coins:
                         no_coins_2()
 
@@ -2915,6 +3012,8 @@ def game_shop():
                         su_du_number += 1
 
                 elif event.key == K_3:
+                    if first_buy == 1:          # 如果还未购买过一次道具
+                        first_buy = 2
                     if coins < lower_coins:
                         no_coins_2()
 
@@ -2924,6 +3023,8 @@ def game_shop():
                         lower_number += 1
 
                 elif event.key == K_4:
+                    if first_buy == 1:          # 如果还未购买过一次道具
+                        first_buy = 2
                     if coins < coins_two_coins:
                         no_coins_2()
 
@@ -2937,6 +3038,9 @@ def game_shop():
         screen.blit(su_du_2_img, (25, 182))
         screen.blit(lower_2_img, (25, 314))
         screen.blit(coins_two_2_img, (25, 446))
+        screen.blit(coins_img, (338, 0))
+        text = a.render(f'{coins}', True, (black))
+        screen.blit(text, (370, 0))
 
         text = upgrade.render(f'生命增加                 拥有：{hui_fu_number}个', True, (black))
         screen.blit(text, (152, 50))
@@ -3288,8 +3392,11 @@ def level_start():
             screen.blit(stop_game, (0, 0))
 
             score += 0.25
-
             hp_coloer_1()
+            FPS = clock.get_fps()
+            FPS = FPS // 1
+            text = tips_game.render(f'{FPS}', True, (green))
+            screen.blit(text, (760, 0))
 
             for event in pygame.event.get():
                 if event.type == QUIT:
@@ -3300,11 +3407,9 @@ def level_start():
                 elif event.type == KEYDOWN:
                     if event.key == ord('w') or event.key == K_UP:
                         player_y = -player_speed
-
                     elif event.key == ord('w') and ord('a'):
                         player_y = -player_speed
                         player_x = -player_speed
-
                     elif event.key == ord('w') and ord('d'):
                         player_y = -player_speed
                         player_x = player_speed
@@ -3313,11 +3418,9 @@ def level_start():
 
                     elif event.key == ord('s') or event.key == K_DOWN:
                         player_y = player_speed
-
                     elif event.key == ord('s') and ord('a'):
                         player_y = player_speed
                         player_x = -player_speed
-
                     elif event.key == ord('s') and ord('d'):
                         player_y = player_speed
                         player_x = player_speed
@@ -3326,7 +3429,6 @@ def level_start():
 
                     elif event.key == ord('a') or event.key == K_LEFT:
                         player_x = -player_speed
-
                     elif event.key == ord('d') or event.key == K_RIGHT:
                         player_x = player_speed
 
@@ -3401,52 +3503,26 @@ def level_start():
 
                 screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
 
-                if (hurt(player_X, player_Y, e.dici_X, e.dici_Y) < 52):
+                if (hurt(player_X, player_Y, e.dici_X, e.dici_Y) < 56):
                     e.restet()
                     if hp > 0:
                         hp -= 1
                         pygame.display.update()
-                        screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
+                        for e in dicis:
+                            screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
+                        for e in dicis_2:
+                            screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
+                        for e in dicis_3:
+                            screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
+                        for e in bullets:
+                            screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
                         pygame.display.update()
                         ko = True
                         clock_2 = pygame.time.Clock()
                         clock_3 = 0
                         while ko:
                             clock_3 += clock_2.tick()
-                            if clock_3 >= 80 and clock_3 <= 120:
-                                player_img = pygame.image.load('图片\玩家坠毁1.png')
-                                screen.blit(player_img, (player_X, player_Y))
-                                pygame.display.update()
-                                player_img = pygame.image.load('图片\玩家坠毁1.png')
-                                screen.blit(player_img, (player_X, player_Y))
-                                pygame.display.update()
-                            elif clock_3 >= 120 and clock_3 <= 160:
-                                player_img = pygame.image.load('图片\玩家坠毁2.png')
-                                screen.blit(player_img, (player_X, player_Y))
-                                pygame.display.update()
-                                player_img = pygame.image.load('图片\玩家坠毁2.png')
-                                screen.blit(player_img, (player_X, player_Y))
-                                pygame.display.update()
-                            elif clock_3 >= 160 and clock_3 <= 200:
-                                player_img = pygame.image.load('图片\玩家坠毁3.png')
-                                screen.blit(player_img, (player_X, player_Y))
-                                pygame.display.update()
-                                player_img = pygame.image.load('图片\玩家坠毁3.png')
-                                screen.blit(player_img, (player_X, player_Y))
-                                pygame.display.update()
-                            elif clock_3 >= 200 and clock_3 <= 240:
-                                ko = False
-                            for event in pygame.event.get():
-                                if event.type == QUIT:
-                                    dianji.play()
-                                    quit_game()
-                                elif event.type == KEYDOWN:
-                                    if event.key == ord('r'):
-                                        dianji.play()
-                                        quit_game()
-                                    elif event.key == ESCAPE:
-                                        dianji.play()
-                                        quit_game()
+                            ko_player()
 
 
 
@@ -3458,52 +3534,26 @@ def level_start():
 
                     screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
 
-                    if (hurt(player_X, player_Y, e.dici_2_X, e.dici_2_Y) < 58):
+                    if (hurt(player_X, player_Y, e.dici_2_X, e.dici_2_Y) < 62):
                         e.restet_2()
                         if hp > 0:
                             hp -= 1
                             pygame.display.update()
-                            screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
+                            for e in dicis:
+                                screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
+                            for e in dicis_2:
+                                screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
+                            for e in dicis_3:
+                                screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
+                            for e in bullets:
+                                screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
                             pygame.display.update()
                             ko = True
                             clock_2 = pygame.time.Clock()
                             clock_3 = 0
                             while ko:
                                 clock_3 += clock_2.tick()
-                                if clock_3 >= 80 and clock_3 <= 120:
-                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                elif clock_3 >= 120 and clock_3 <= 160:
-                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                elif clock_3 >= 160 and clock_3 <= 200:
-                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                elif clock_3 >= 200 and clock_3 <= 240:
-                                    ko = False
-                                for event in pygame.event.get():
-                                    if event.type == QUIT:
-                                        dianji.play()
-                                        quit_game()
-                                    elif event.type == KEYDOWN:
-                                        if event.key == ord('r'):
-                                            dianji.play()
-                                            quit_game()
-                                        elif event.key == ESCAPE:
-                                            dianji.play()
-                                            quit_game()
+                                ko_player()
 
 
 
@@ -3527,51 +3577,25 @@ def level_start():
 
                     screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
 
-                    if (hurt(player_X, player_Y, e.dici_3_bullet_X, e.dici_3_bullet_Y) < 64):
+                    if (hurt(player_X, player_Y, e.dici_3_bullet_X, e.dici_3_bullet_Y) < 68):
                         e.bullet_restet()
                         if hp > 0:
                             hp -= 1
-                            screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
+                            for e in dicis:
+                                screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
+                            for e in dicis_2:
+                                screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
+                            for e in dicis_3:
+                                screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
+                            for e in bullets:
+                                screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
                             pygame.display.update()
                             ko = True
                             clock_2 = pygame.time.Clock()
                             clock_3 = 0
                             while ko:
                                 clock_3 += clock_2.tick()
-                                if clock_3 >= 80 and clock_3 <= 120:
-                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                elif clock_3 >= 120 and clock_3 <= 160:
-                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                elif clock_3 >= 160 and clock_3 <= 200:
-                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                elif clock_3 >= 200 and clock_3 <= 240:
-                                    ko = False
-                                for event in pygame.event.get():
-                                    if event.type == QUIT:
-                                        dianji.play()
-                                        quit_game()
-                                    elif event.type == KEYDOWN:
-                                        if event.key == ord('r'):
-                                            dianji.play()
-                                            quit_game()
-                                        elif event.key == ESCAPE:
-                                            dianji.play()
-                                            quit_game()
+                                ko_player()
 
                 for e in dicis_3:
                     e.dici_3_Y += e.dici_3_speed
@@ -3580,54 +3604,73 @@ def level_start():
 
                     screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
 
-                    if (hurt(player_X, player_Y, e.dici_3_X, e.dici_3_Y) < 55):
+                    if (hurt(player_X, player_Y, e.dici_3_X, e.dici_3_Y) < 59):
                         e.restet_3()
                         if hp > 0:
                             hp -= 1
                             pygame.display.update()
-                            screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
+                            for e in dicis:
+                                screen.blit(e.dici_img, (e.dici_X, e.dici_Y))
+                            for e in dicis:
+                                screen.blit(e.dici_1_img, (e.dici_1_X, e.dici_1_Y))
+                            for e in dicis_2:
+                                screen.blit(e.dici_2_img, (e.dici_2_X, e.dici_2_Y))
+                            for e in bullets:
+                                screen.blit(e.dici_3_bullet_img, (e.dici_3_bullet_X, e.dici_3_bullet_Y))
+                            for e in dicis_3:
+                                screen.blit(e.dici_3_img, (e.dici_3_X, e.dici_3_Y))
                             pygame.display.update()
                             ko = True
-                            clock = pygame.time.Clock()
+                            clock_2 = pygame.time.Clock()
                             clock_3 = 0
                             while ko:
                                 clock_3 += clock_2.tick()
-                                if clock_3 >= 80 and clock_3 <= 120:
-                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                    player_img = pygame.image.load('图片\玩家坠毁1.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                elif clock_3 >= 120 and clock_3 <= 160:
-                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                    player_img = pygame.image.load('图片\玩家坠毁2.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                elif clock_3 >= 160 and clock_3 <= 200:
-                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                    player_img = pygame.image.load('图片\玩家坠毁3.png')
-                                    screen.blit(player_img, (player_X, player_Y))
-                                    pygame.display.update()
-                                elif clock_3 >= 200 and clock_3 <= 240:
-                                    ko = False
-                                for event in pygame.event.get():
-                                    if event.type == QUIT:
-                                        dianji.play()
-                                        quit_game()
-                                    elif event.type == KEYDOWN:
-                                        if event.key == ord('r'):
-                                            dianji.play()
-                                            quit_game()
-                                        elif event.key == ESCAPE:
-                                            dianji.play()
-                                            quit_game()
+                                ko_player()
                                     
             pygame.display.update()
+
+
+
+def ko_player():
+    global ko
+    FPS = clock.get_fps()
+    FPS = FPS // 1
+    text = tips_game.render(f'{FPS}', True, (green))
+    screen.blit(text, (760, 0))
+    if clock_3 >= 20 and clock_3 <= 60:
+        player_img = pygame.image.load('图片\玩家坠毁1.png')
+        screen.blit(player_img, (player_X, player_Y))
+        pygame.display.update()
+        player_img = pygame.image.load('图片\玩家坠毁1.png')
+        screen.blit(player_img, (player_X, player_Y))
+        pygame.display.update()
+    elif clock_3 >= 60 and clock_3 <= 100:
+        player_img = pygame.image.load('图片\玩家坠毁2.png')
+        screen.blit(player_img, (player_X, player_Y))
+        pygame.display.update()
+        player_img = pygame.image.load('图片\玩家坠毁2.png')
+        screen.blit(player_img, (player_X, player_Y))
+        pygame.display.update()
+    elif clock_3 >= 100 and clock_3 <= 140:
+        player_img = pygame.image.load('图片\玩家坠毁3.png')
+        screen.blit(player_img, (player_X, player_Y))
+        pygame.display.update()
+        player_img = pygame.image.load('图片\玩家坠毁3.png')
+        screen.blit(player_img, (player_X, player_Y))
+        pygame.display.update()
+    elif clock_3 >= 140:
+        ko = False
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            dianji.play()
+            quit_game()
+        elif event.type == KEYDOWN:
+            if event.key == ord('r'):
+                dianji.play()
+                quit_game()
+            elif event.key == K_ESCAPE:
+                dianji.play()
+                quit_game()
 
 
 
@@ -3964,48 +4007,8 @@ def game_over_2():
     while True:
 
         clock.tick(5)
+        screen.blit(bg_img, (0, 0))
         pygame.display.update()
-        for event in pygame.event.get():
-            if event.type == QUIT:
-                dianji.play()
-                save()
-                quit_game()
-
-            elif event.type == KEYDOWN:
-                if event.key == ord('r'):
-                    dianji.play()
-                    restet_all()
-                    level_select()
-
-                elif event.key == ord('t'):
-                    dianji.play()
-                    restet_all_2()
-                    xing_xi()
-
-                elif event.key == ord('h'):
-                    dianji.play()
-                    restet_all()
-                    home_page()
-
-                elif event.key == ord('q'):
-                    dianji.play()
-                    restet_all()
-                    quit_game()
-
-                elif event.key == ord('u'):
-                    dianji.play()
-                    restet_all()
-                    upgrade_player()
-
-                elif event.key == ord('s'):
-                    dianji.play()
-                    restet_all()
-                    game_shop()
-
-                elif event.key == K_ESCAPE:
-                    dianji.play()
-                    restet_all()
-                    level()
 
         back()
 
@@ -4075,6 +4078,48 @@ def game_over_2():
 
             text = upgrade.render('S', True, (red))
             screen.blit(text, (450, 325))
+
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                dianji.play()
+                save()
+                quit_game()
+
+            elif event.type == KEYDOWN:
+                if event.key == ord('r'):
+                    dianji.play()
+                    restet_all()
+                    level_select()
+
+                elif event.key == ord('t'):
+                    dianji.play()
+                    restet_all_2()
+                    xing_xi()
+
+                elif event.key == ord('h'):
+                    dianji.play()
+                    restet_all()
+                    home_page()
+
+                elif event.key == ord('q'):
+                    dianji.play()
+                    restet_all()
+                    quit_game()
+
+                elif event.key == ord('u'):
+                    dianji.play()
+                    restet_all()
+                    upgrade_player()
+
+                elif event.key == ord('s'):
+                    dianji.play()
+                    restet_all()
+                    game_shop()
+
+                elif event.key == K_ESCAPE:
+                    dianji.play()
+                    restet_all()
+                    level()
 
         pygame.display.update()
 
@@ -4189,47 +4234,6 @@ def win():
     while True:
         clock.tick(3)
         screen.blit(bg_img, (0, 0))
-        for event in pygame.event.get():
-            if event.type == QUIT:
-                dianji.play()
-                save()
-                quit_game()
-
-            elif event.type == KEYDOWN:
-                if event.key == ord('r'):
-                    dianji.play()
-                    restet_all()
-                    level_select()
-
-                elif event.key == ord('n'):
-                    dianji.play()
-                    restet_all_2()
-                    next_level()
-
-                elif event.key == K_ESCAPE:
-                    dianji.play()
-                    restet_all()
-                    level()
-
-                elif event.key == ord('t'):
-                    dianji.play()
-                    restet_all_2()
-                    xing_xi()
-
-                elif event.key == ord('h'):
-                    dianji.play()
-                    restet_all()
-                    home_page()
-
-                elif event.key == ord('u'):
-                    dianji.play()
-                    restet_all()
-                    upgrade_player()
-
-                elif event.key == ord('s'):
-                    dianji.play()
-                    restet_all()
-                    game_shop()
 
         back()
         hp_coloer_1()
@@ -4296,6 +4300,48 @@ def win():
 
             text = upgrade.render('S', True, (green))
             screen.blit(text, (450, 325))
+
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                dianji.play()
+                save()
+                quit_game()
+
+            elif event.type == KEYDOWN:
+                if event.key == ord('r'):
+                    dianji.play()
+                    restet_all()
+                    level_select()
+
+                elif event.key == ord('n'):
+                    dianji.play()
+                    restet_all_2()
+                    next_level()
+
+                elif event.key == K_ESCAPE:
+                    dianji.play()
+                    restet_all()
+                    level()
+
+                elif event.key == ord('t'):
+                    dianji.play()
+                    restet_all_2()
+                    xing_xi()
+
+                elif event.key == ord('h'):
+                    dianji.play()
+                    restet_all()
+                    home_page()
+
+                elif event.key == ord('u'):
+                    dianji.play()
+                    restet_all()
+                    upgrade_player()
+
+                elif event.key == ord('s'):
+                    dianji.play()
+                    restet_all()
+                    game_shop()
 
         pygame.display.update()
 
@@ -4476,9 +4522,11 @@ def play_game():
 
 
 def xing_xi():
-    global level_number, hui_fu_number, su_du_number, lower_number, coins_two_number, hp, hp_3, hp_00, player_speed, player_speed_00, player_speed_4, hui_fu_ci_shu, su_du_ci_shu, lower_ci_shu, coins_two_ci_shu, coins_two
+    global level_number, hui_fu_number, su_du_number, lower_number, coins_two_number, hp, hp_3, hp_00, player_speed, player_speed_00, player_speed_4, hui_fu_ci_shu, su_du_ci_shu, lower_ci_shu, coins_two_ci_shu, coins_two, in_xing_xi
     dao_ju_zeng_jia()
     while True:
+        in_xing_xi = True
+        newer_tips.def_shop_newer_tips()
         clock.tick(5)
         screen.fill(white)
         back()
@@ -4518,32 +4566,24 @@ def xing_xi():
 
         text = shop_1.render(f'{lower_number}', True, (green))
         screen.blit(text, (433, 410))
-
         text = shop_1.render(f'{hui_fu_number}', True, (green))
         screen.blit(text, (543, 410))
-
         text = shop_1.render(f'{su_du_number}', True, (green))
         screen.blit(text, (653, 410))
-
         text = shop_1.render(f'{coins_two_number}', True, (green))
         screen.blit(text, (753, 410))
-
         text = a_00.render('开始闯关', True, (green))
         screen.blit(text, (580, 530))
 
         if tips == True:
             text = shop_1.render('空格', True, (green))
             screen.blit(text, (725, 510))
-
             text = shop_1.render('1.', True, (green))
             screen.blit(text, (428, 320))
-
             text = shop_1.render('2.', True, (green))
             screen.blit(text, (538, 320))
-
             text = shop_1.render('3.', True, (green))
             screen.blit(text, (648, 320))
-
             text = shop_1.render('4.', True, (green))
             screen.blit(text, (748, 320))
 
@@ -4573,6 +4613,7 @@ def xing_xi():
                     hui_fu_ci_shu = 0
                     su_du_ci_shu = 0
                     lower_ci_shu = 0
+                    in_xing_xi = False
                     play_game_2()
 
                 elif event.key == K_ESCAPE:
@@ -4583,6 +4624,7 @@ def xing_xi():
                     su_du_ci_shu = 0
                     lower_ci_shu = 0
                     save()
+                    in_xing_xi = False
                     level()
 
                 elif event.key == ord('r'):
@@ -4597,6 +4639,7 @@ def xing_xi():
                     su_du_ci_shu = 0
                     lower_ci_shu = 0
                     save()
+                    in_xing_xi = False
                     level_select()
 
                 elif event.key == K_1:
@@ -4831,13 +4874,11 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
                             save()
                             level_start()
-
                         elif event.key == K_ESCAPE:
                             dianji.play()
                             save()
@@ -4862,13 +4903,11 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
                             save()
                             level_start()
-
                         elif event.key == K_ESCAPE:
                             dianji.play()
                             save()
@@ -4893,13 +4932,11 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
                             save()
                             level_start()
-
                         elif event.key == K_ESCAPE:
                             dianji.play()
                             save()
@@ -4926,13 +4963,11 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
                             save()
                             level_start()
-
                         elif event.key == K_ESCAPE:
                             dianji.play()
                             save()
@@ -4957,13 +4992,11 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
                             save()
                             level_start()
-
                         elif event.key == K_ESCAPE:
                             dianji.play()
                             save()
@@ -4978,7 +5011,7 @@ class donut():
             
     def block_open_donut():
         global cheng_jiu_donut, shop_donut, upgrade_donut, tong_ji_donut, dui_huan_donut
-        if cheng_jiu_donut == True:
+        if cheng_jiu_donut == True or donut_open == 2:
             cheng_jiu_donut = False
             screen.fill(white)
             text = upgrade.render('你定下了一个个目标，并期望通过完成来磨练自己', True, (green))
@@ -4994,7 +5027,6 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
@@ -5009,7 +5041,7 @@ class donut():
                             save()
                             cheng_jiu()
             
-        elif shop_donut == True:
+        elif shop_donut == True or donut_open == 2:
             shop_donut = False
             screen.fill(white)
             text = upgrade.render('听说附近有个商店呢！说不定有好东西，去看看吧', True, (green))
@@ -5031,7 +5063,6 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
@@ -5046,7 +5077,7 @@ class donut():
                             save()
                             game_shop()
             
-        elif upgrade_donut == True:
+        elif upgrade_donut == True or donut_open == 2:
             upgrade_donut = False
             screen.fill(white)
             text = upgrade.render('是时候把这部飞机改造一下了！<(￣︶￣)↗[GO!]', True, (green))
@@ -5062,7 +5093,6 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
@@ -5077,20 +5107,20 @@ class donut():
                             save()
                             upgrade_player()
             
-        elif tong_ji_donut == True:
+        elif tong_ji_donut == True or donut_open == 2:
             tong_ji_donut = False
             screen.fill(white)
             text = upgrade.render('你的光荣历程在这被记载的仔仔细细', True, (green))
             screen.blit(text, (130, 220))
-            if die_number > 6:
+            if die_number > 8:
                 text = upgrade.render('玩游戏嘛快乐就行~', True, (green))
-                screen.blit(text, (150, 250))
+                screen.blit(text, (260, 250))
             elif starts >= 4 and die_number < 6:
-                text = upgrade.render('我的辉煌战绩真好看', True, (green))
-                screen.blit(text, (150, 250))
+                text = upgrade.render('嗯~真好看', True, (green))
+                screen.blit(text, (320, 250))
             else:
-                text = upgrade.render('看吧看吧~（平平常常啦）', True, (green))
-                screen.blit(text, (170, 250))
+                text = upgrade.render('平淡无奇的战绩', True, (green))
+                screen.blit(text, (280, 250))
             if tips == True:
                 donut.ord_n()
             pygame.display.update()
@@ -5100,7 +5130,6 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
@@ -5115,7 +5144,7 @@ class donut():
                             save()
                             tong_ji_1()
 
-        elif dui_huan_donut == True:
+        elif dui_huan_donut == True or donut_open == 2:
             dui_huan_donut = False
             screen.fill(white)
             text = upgrade.render('众所周知成就和技术能当饭吃(￣y▽,￣)╭ ', True, (green))
@@ -5129,7 +5158,6 @@ class donut():
                         dianji.play()
                         save()
                         quit_game()
-
                     elif event.type == KEYDOWN:
                         if event.key == ord('r'):
                             dianji.play()
@@ -5144,12 +5172,130 @@ class donut():
                             save()
                             coins_dui_huan()
 
-    def first_donut():
+    def first_enter_game_donut():
         pass
     def wins_donut():
         pass
     def overs_donut():
         pass
+
+
+
+class newer_tips():
+    def def_shop_newer_tips():
+        global shop_newer_tips
+        if shop_newer_tips == 1 and in_shop == True:
+            shop_newer_tips = 2
+            text = upgrade.render('你所购买的道具将在关卡信息界面显示', True, (green))
+            screen.blit(text, (120, 0))
+            text = upgrade.render('你可以在那里使用它们！', True, (green))
+            screen.blit(text, (220, 30))
+            screen.blit(hui_fu_2_img, (50, 300))
+            screen.blit(su_du_2_img, (254, 300))
+            screen.blit(lower_2_img, (458, 300))
+            screen.blit(coins_two_2_img, (662, 300))
+            if tips == True:
+                donut.ord_n()
+            pygame.display.update()
+            while True:
+                for event in pygame.event.get():
+                    if event.type == QUIT:
+                        dianji.play()
+                        save()
+                        quit_game()
+                    elif event.type == KEYDOWN:
+                        if event.key == ord('r'):
+                            dianji.play()
+                            save()
+                            game_shop()
+                        elif event.key == K_ESCAPE:
+                            dianji.play()
+                            save()
+                            game_shop()
+                        elif event.key == ord('n'):
+                            dianji.play()
+                            save()
+                            game_shop()
+
+        elif shop_newer_tips == 2 and in_xing_xi == True:
+            shop_newer_tips = 3
+            text = upgrade.render('在此页面内您可以使用特定的按键来使用道具', True, (green))
+            screen.blit(text, (80, 0))
+            text = upgrade.render('每次游戏都会限制使用次数，请合理运用购买', True, (green))
+            screen.blit(text, (80, 30))
+            screen.blit(hui_fu_img, (100, 300))
+            screen.blit(su_du_img, (300, 300))
+            screen.blit(lower_img, (500, 300))
+            screen.blit(coins_two_img, (700, 300))
+            if tips == True:
+                donut.ord_n()
+                text = shop_1.render('1.', True, (green))
+                screen.blit(text, (100, 270))
+                text = shop_1.render('2.', True, (green))
+                screen.blit(text, (300, 270))
+                text = shop_1.render('3.', True, (green))
+                screen.blit(text, (500, 270))
+                text = shop_1.render('4.', True, (green))
+                screen.blit(text, (700, 270))
+            pygame.display.update()
+            while True:
+                for event in pygame.event.get():
+                    if event.type == QUIT:
+                        dianji.play()
+                        save()
+                        quit_game()
+                    elif event.type == KEYDOWN:
+                        if event.key == ord('r'):
+                            dianji.play()
+                            save()
+                            xing_xi()
+                        elif event.key == K_ESCAPE:
+                            dianji.play()
+                            save()
+                            xing_xi()
+                        elif event.key == ord('n'):
+                            dianji.play()
+                            save()
+                            xing_xi()
+
+
+    def def_dui_huan_newer_tips():
+        global dui_huan_newer_tips
+        if dui_huan_newer_tips == False:
+            dui_huan_newer_tips = True
+            text = upgrade.render('在此页面内您可以兑换金币而不损失任何物品', True, (green))
+            screen.blit(text, (80, 0))
+            text = upgrade.render('这将依据您的成就解锁个数或完美通关个数来', True, (green))
+            screen.blit(text, (80, 30))
+            text = upgrade.render('来确定您操作后所获得的金币', True, (green))
+            screen.blit(text, (150, 60))
+            text = upgrade.render('★', True, (yellow))
+            screen.blit(text, (300, 300))
+            screen.blit(coins_img, (400, 300))
+            text = upgrade.render('★', True, (blue))
+            screen.blit(text, (500, 300))
+            if tips == True:
+                donut.ord_n()
+            pygame.display.update()
+            while True:
+                for event in pygame.event.get():
+                    if event.type == QUIT:
+                        dianji.play()
+                        save()
+                        quit_game()
+                    elif event.type == KEYDOWN:
+                        if event.key == ord('r'):
+                            dianji.play()
+                            save()
+                            coins_dui_huan()
+                        elif event.key == K_ESCAPE:
+                            dianji.play()
+                            save()
+                            coins_dui_huan()
+                        elif event.key == ord('n'):
+                            dianji.play()
+                            save()
+                            coins_dui_huan()
 
 
 
@@ -5260,8 +5406,9 @@ def first_open_game_tips():
 
 def open_block():
     aaa = False
-    global first_cheng_jiu_open, first_shop_open, first_upgrade_open, first_tong_ji_open, first_dui_huan_open, open_block_ok, cheng_jiu_open, shop_open, upgrade_open, tong_ji_open, dui_huan_open, ticks, number
+    global first_cheng_jiu_open, first_shop_open, first_upgrade_open, first_tong_ji_open, first_upgrade_dao_ju_open, first_dui_huan_open, open_block_ok, cheng_jiu_open, shop_open, upgrade_open, tong_ji_open, upgrade_dao_ju_open, dui_huan_open, ticks, number
     ticks = 0
+    cheng_jiu_pan_duan()
     if tong_guan_1 == True and cheng_jiu_cishu_1 == True:
         cheng_jiu_open = True
     if tong_guan_2 == True:
@@ -5271,8 +5418,8 @@ def open_block():
     if tong_guan_4 == True:
         tong_ji_open = True
     if tong_guan_5 == True:
-        dui_huan_open = True
-    if cheng_jiu_1_coins >= 7 or starts >= 7:
+        upgrade_dao_ju_open = True
+    if (cheng_jiu_1_coins >= 7) or (starts >= 7):
         dui_huan_open = True
     while True:
         clock.tick(5)
@@ -5336,6 +5483,21 @@ def open_block():
             aaa = True
             sleep(1.5)
 
+        elif upgrade_dao_ju_open == True and first_upgrade_dao_ju_open == False:
+            screen.blit(bg_img_2, (0, 0))
+            text = score_look.render('道具升级模块解锁！', True, (green))
+            screen.blit(text, (250, 230))
+            text = cheng_jiu_1a.render('升级界面中按下D进入', True, (green))
+            screen.blit(text, (300, 280))
+            screen.blit(hui_fu_img, (480, 180))
+            screen.blit(su_du_img, (240, 120))
+            screen.blit(lower_img, (560, 320))
+            screen.blit(coins_two_img, (200, 260))
+            first_upgrade_dao_ju_open = True
+            open_block_ok = True
+            aaa = True
+            sleep(1.5)
+
         elif dui_huan_open == True and first_dui_huan_open == False:
             screen.blit(bg_img_2, (0, 0))
             text = score_look.render('兑换模块解锁！', True, (green))
@@ -5352,7 +5514,7 @@ def open_block():
             aaa = True
             sleep(1.5)
 
-        elif (cheng_jiu_open == True and first_cheng_jiu_open == True and aaa == False) or (cheng_jiu_open == False and first_cheng_jiu_open == False and aaa == False) or(shop_open == True and first_shop_open == True and aaa == False) or (shop_open == False and first_shop_open == False and aaa == False) or (upgrade_open == True and first_upgrade_open == True and aaa == False) or (upgrade_open == False and first_upgrade_open == False and aaa == False) or (tong_ji_open == True and first_tong_ji_open == True and aaa == False) or (tong_ji_open == False and first_tong_ji_open == False and aaa == False) or (dui_huan_open == True and first_dui_huan_open == True and aaa == False) or (dui_huan_open == False and first_dui_huan_open == False and aaa == False):
+        elif (cheng_jiu_open == True and first_cheng_jiu_open == True and aaa == False) or (cheng_jiu_open == False and first_cheng_jiu_open == False and aaa == False) or(shop_open == True and first_shop_open == True and aaa == False) or (shop_open == False and first_shop_open == False and aaa == False) or (upgrade_open == True and first_upgrade_open == True and aaa == False) or (upgrade_open == False and first_upgrade_open == False and aaa == False) or (tong_ji_open == True and first_tong_ji_open == True and aaa == False) or (tong_ji_open == False and first_tong_ji_open == False and aaa == False) or (upgrade_dao_ju_open == True and first_upgrade_dao_ju_open == True and aaa == False) or (upgrade_dao_ju_open == False and first_upgrade_dao_ju_open == False and aaa == False) or (dui_huan_open == True and first_dui_huan_open == True and aaa == False) or (dui_huan_open == False and first_dui_huan_open == False and aaa == False):
             open_block_ok = True
             home_page()
 
@@ -5452,17 +5614,24 @@ def home_page():
                         coins_dui_huan()
 
         if save_name_true == True:
-            if len(name) >= 5:
+            if len(name) == 1:
                 text = a.render(f'{name}', True, (black))
-                screen.blit(text, (340, 0))
-
+                screen.blit(text, (360, 0))
             elif len(name) == 2:
                 text = a.render(f'{name}', True, (black))
                 screen.blit(text, (350, 0))
-
-            else:
+            elif len(name) == 3:
                 text = a.render(f'{name}', True, (black))
-                screen.blit(text, (360, 0))
+                screen.blit(text, (340, 0))
+            elif len(name) == 4:
+                text = a.render(f'{name}', True, (black))
+                screen.blit(text, (330, 0))
+            elif len(name) == 5:
+                text = a.render(f'{name}', True, (black))
+                screen.blit(text, (320, 0))
+            elif len(name) == 6:
+                text = a.render(f'{name}', True, (black))
+                screen.blit(text, (310, 0))
 
         text = title.render('回避', True, (black))
         screen.blit(text, (280, 60))
@@ -5490,7 +5659,7 @@ def home_page():
             text = coins_look.render('统计==》', True, (black))
             screen.blit(text, (690, 30))
 
-        if dui_huan_open == True:
+        if (cheng_jiu_1_coins >= 7) or (starts >= 7):
             text = coins_look.render('兑换==》', True, (black))
             screen.blit(text, (690, 60))
 
@@ -5535,7 +5704,7 @@ def home_page():
                 text = shop_1.render('T.', True, (green))
                 screen.blit(text, (670, 30))
 
-            if dui_huan_open == True:
+            if (cheng_jiu_1_coins >= 7) or (starts >= 7):
                 text = shop_1.render('H.', True, (green))
                 screen.blit(text, (667, 60))
 
